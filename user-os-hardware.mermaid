@@ -1,0 +1,23 @@
+graph TD
+    subgraph User_Applications["user/applications"]
+        subgraph Shell["shell"]
+            subgraph Kernel["kernel"]
+                subgraph Hardware["Hardware"]
+                    H[" "]
+                end
+                K[" "]
+            end
+            S[" "]
+        end
+        U[" "]
+    end
+    
+    style User_Applications fill:#ffcccc,stroke:#ff0000,color:#000000
+    style Shell fill:#ffb3b3,stroke:#ff0000,color:#000000
+    style Kernel fill:#ff9999,stroke:#ff0000,color:#000000
+    style Hardware fill:#ff8080,stroke:#ff0000,color:#000000
+    
+    style U fill:none,stroke:none
+    style S fill:none,stroke:none
+    style K fill:none,stroke:none
+    style H fill:none,stroke:none

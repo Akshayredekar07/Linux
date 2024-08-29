@@ -3,3 +3,18 @@ UNIX/LINUX
 
 90% of real time applications are hosted on Linux platform.
 
+What is Unix?
+
+>> It is an operating system created in 1960s.
+
+Creating multiple directories one time:
+>> mkdir dir{1..50}
+
+
+Creating multiple files one time in specific directory:
+>> touch dir{1..50}/file{1..5}
+
+This command will create 5 txt in eahc directory file like file1, file2, ...
+
+
+

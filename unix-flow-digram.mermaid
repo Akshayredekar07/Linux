@@ -1,0 +1,22 @@
+graph LR
+    A[User] --> B[UNIX Operating System]
+    B --> C[Hardware]
+    subgraph B[UNIX Operating System]
+    D[Shell]
+    E[Kernel]
+    end
+    A --> D
+    D --> E
+    E --> C
+
+    classDef user fill:#FF0000,stroke:#000000,stroke-width:2px,color:#FFFFFF;
+    classDef os fill:#00FF00,stroke:#000000,stroke-width:2px,color:#000000;
+    classDef shell fill:#0000FF,stroke:#000000,stroke-width:2px,color:#FFFFFF;
+    classDef kernel fill:#FFFF00,stroke:#000000,stroke-width:2px,color:#000000;
+    classDef hardware fill:#FF00FF,stroke:#000000,stroke-width:2px,color:#FFFFFF;
+
+    class A user;
+    class B os;
+    class C hardware;
+    class D shell;
+    class E kernel;

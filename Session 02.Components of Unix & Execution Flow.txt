@@ -1,0 +1,136 @@
+
+1. Components of UNIX:
+~~~~~~~~~~~~~~~~~~~~~~
+    
+    2 Important Components:
+
+        a. Shell
+        b. Kernal
+
+a. shell:
+~~~~~~~~~
+> It is outer layer of unix operating system.
+> Shell reads command whether it is valid command or not.
+> Shell reads command whether it is properly used or not.
+> If everyting is proper then shell interpreats/converts than ccommand into kernal understandable form and handover that to kernal.
+> Shell act as interface between user and kernal.
+
+b. Kernal:
+~~~~~~~~~~
+> It is the core component of unix operating system.
+> It is responsible to execute our command with help of hardware components.
+> Memory allocation and process allocation is take care by kernal.
+> It act as interface between shell and hardware components.
+
+To do a big task we may requires multiple commands:
+
+>> gedit test.sh 
+>> chmod u+x test.sh 
+execute this commands
+>> ./test.sh
+
+Types of users in Linux system:
+
+Normal user                     :   $ prompt
+Super user/Root user/Admin user :   # prompt
+
+~~~~~~~
+akshay@Ubuntu:~/Documents/DurgaSoft_Linux$ whoami
+akshay
+akshay@Ubuntu:~/Documents/DurgaSoft_Linux$ sudo -i
+root@Ubuntu:~# whoami
+root
+root@Ubuntu:~# exit
+logout
+akshay@Ubuntu:~/Documents/DurgaSoft_Linux$ 
+~~~~~~~
+
+sudo -i   :  switch to superuser
+exit      :  retrun back to normal user 
+
+Online unix terminal:
+http://masswerk.at/jsuix
+
+Most commonly used linux commands:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+pwd    : print working directory
+ls     : list out all files and directories
+mkdir  : to create a directory
+cd     : change dierctory
+touch  : to create an empty file
+rmidr  : to remove the directory
+rm     : to remove a file
+date   : display current date and time
+help   : to display avilable commands
+exit   : to logout the session
+clear  : to clear the terminal
+hello  : to display breif system information
+
+
+/ : is the root directory in linux
+
+user home directory for the durga:  /home/durga
+user home directory for the akshay: /home/akshay 
+
+
+Online unix terminal:
+http://masswerk.at/jsuix
+
+Contents:
+
+  alias       sets an alias for a (complex) command
+  apropos     displays a short description of a command
+  browse      opens a web page in a new browser window
+  cal         displays a monthly calendar
+  cat         concatenates and outputs files
+  cd          changes the current directory
+  chmod       changes a files's permissions.
+  clear       clears and resets the terminal display
+  cp          copies files from source to target
+  date        displays the date and time with format options
+  echo        writes all arguments back to the terminal
+  exit        exits the current shell or leaves the session
+  features    displays the features of this application.
+  fexport     exports home-directory for copy and later re-use
+  fimport     imports preveously exported file-data to the file-system
+  hallo       displays a short system information
+  halt        halts / shuts down the system
+  hello       displays a short system information
+  help        displays a help screen with complete command list
+  info        displays information about the site
+  invaders    starts the well known arcade game.
+  js          javascript evaluation (no user command, experts only; read man!)
+  logname     displays the current user name
+  ls          lists a directory
+  mail        launches a mail client
+  man         displays manual pages for a command
+  mkdir       creates a directory
+  more        displays long files in a pager
+  mv          moves (renames) files from source to target
+  news        displays system-news and information on recent changes.
+  pager       pager (synonym for "more")
+  pg          pager (synonym for "more")
+  pr          prints a file to a browser window
+  ps          displays current processes
+  pwd         prints the current working directory
+  reboot      halts and reboots the system
+  rm          removes files
+  rmdir       removes /empty directories
+  set         sets shell-variables, without arguments a full list is displayed
+  sh          starts a new system shell (command interpreter)
+  splitmode   switches terminal splitmode (statusline) on/off
+  stty        sets terminal options
+  su          switches user
+  time        displays the current time
+  touch       sets the timestamp of a file or creates empty file
+  type        writes all arguments back employing type styles
+  unalias     discards an alias defined by "alias"
+  uname       displays the system identification
+  unset       discards a shell variable
+  vi          visual editor (simpler version of standard UN*X vi)
+  view        vi (visual editor) in view mode (read only)
+  wc          word count (words, lines, characters)
+  web         opens a web page in a new browser window
+  which       evaluates which command will be executed
+  write       writes to the terminal employing type styles as mark up.

@@ -47,7 +47,7 @@ img.jpg: ASCII text
 
 akshay@Ubuntu:~/Documents/DurgaSoft_Linux$ mv img.jpg img.durga
 akshay@Ubuntu:~/Documents/DurgaSoft_Linux$ file img.durga
-
+img.durga: ASCII text
 
 {B} Directory files:   
         
@@ -55,4 +55,43 @@ akshay@Ubuntu:~/Documents/DurgaSoft_Linux$ file img.durga
     - In windows, we can use folder terminology where as in linux we can use directory terminology. 
     - Directory can contains files and sub directories. 
 
-    
+
+{C} Device files:
+
+    - In Linux, every device is represented as a file. By using this file we can communicate with that device.
+    Eg. >> tty
+        - this files represent terminal
+
+        - external terminal 
+        akshay@Ubuntu:~/Documents/DurgaSoft_Linux$ tty
+        /dev/pts/0
+
+        - vscode terminal
+        akshay@Ubuntu:~/Documents/DurgaSoft_Linux$ tty
+        /dev/pts/1
+
+
+        We can send the one terminal output to second terminal
+        - first terminal
+        """
+        kshay@Ubuntu:~/Documents/DurgaSoft_Linux$ tty
+        /dev/pts/0
+        akshay@Ubuntu:~/Documents/DurgaSoft_Linux$ echo "Hello I am in first terminal"
+        Hello I am in first terminal
+        akshay@Ubuntu:~/Documents/DurgaSoft_Linux$ echo "Hello I am in first terminal" > /dev/pts/1
+        """
+        - second terminal
+        """
+        akshay@Ubuntu:~/Documents/DurgaSoft_Linux$ Hello I am in first terminal
+        """
+        
+        akshay@Ubuntu:~/Documents/DurgaSoft_Linux$ clear > /dev/pts/1
+        akshay@Ubuntu:~/Documents/DurgaSoft_Linux$ 
+
+
+
+Note: short-cut commands to open and close terminal  
+    - ctrl+alt+t : To open terminal 
+    - ctrl+d     : To close terminal        
+
+

@@ -1,0 +1,58 @@
+
+Types of Files in Linux: 
+ In Linux everything is treated as File.  
+ All files are divided into 3 types 
+
+ 1. Nomral files or ordinary files:
+ 2  Directory files
+ 3. Device files 
+
+{A} Ordinary files:
+
+    - This files contains data. It can be normal text file or binary file(video, image, audio etc).
+    - E.g. 
+        - abc.txt
+        - index.html
+        - test.java
+        - test.py
+        - script.sh
+        - image.jpg
+        - song.mp4
+
+    - In linux file extension is not important, based on our content linux identify file type.
+    - E.g
+        >> touch img.jpg
+        >> ls -l img.jpg
+        >> file img.jpg
+        >> gedit img.jpg
+
+        "Add some cmtent to it"
+
+        >> cat img.jpg
+        >> file img.jpg
+
+"""
+akshay@Ubuntu:~/Documents/DurgaSoft_Linux$ touch img.jpg
+akshay@Ubuntu:~/Documents/DurgaSoft_Linux$ ls -l img.jpg
+-rw-rw-r-- 1 akshay akshay 0 Aug 30 14:31 img.jpg
+akshay@Ubuntu:~/Documents/DurgaSoft_Linux$ file img.jpg
+img.jpg: empty
+akshay@Ubuntu:~/Documents/DurgaSoft_Linux$ gedit img.jpg
+akshay@Ubuntu:~/Documents/DurgaSoft_Linux$ cat img.jpg
+Added some content to it
+akshay@Ubuntu:~/Documents/DurgaSoft_Linux$ file img.jpg
+img.jpg: ASCII text
+"""      
+- Remaing img.jpg to img.durga
+
+akshay@Ubuntu:~/Documents/DurgaSoft_Linux$ mv img.jpg img.durga
+akshay@Ubuntu:~/Documents/DurgaSoft_Linux$ file img.durga
+
+
+{B} Directory files:   
+        
+    - These files represent directories. 
+    - In windows, we can use folder terminology where as in linux we can use directory terminology. 
+    - Directory can contains files and sub directories. 
+
+    

@@ -84,7 +84,7 @@ img.durga: ASCII text
         """
         akshay@Ubuntu:~/Documents/DurgaSoft_Linux$ Hello I am in first terminal
         """
-        
+
         akshay@Ubuntu:~/Documents/DurgaSoft_Linux$ clear > /dev/pts/1
         akshay@Ubuntu:~/Documents/DurgaSoft_Linux$ 
 
@@ -93,5 +93,35 @@ img.durga: ASCII text
 Note: short-cut commands to open and close terminal  
     - ctrl+alt+t : To open terminal 
     - ctrl+d     : To close terminal        
+
+How to check File Type: 
+    - In Ubuntu, blue color files represents directories and all remaining are considered as normal files. This color conventions are varied from flavour to flavour. Hence it is not standard way to check file type.
+
+    - We have to use 'ls -l' command. 
+
+'''
+total 4576
+-rw-rw-r-- 1 akshay akshay     342 Aug 29 07:52  directory-hierarchy-linux.mermaid
+-rw-rw-r-- 1 akshay akshay 4633146 Aug 28 11:05 'DurgaSir Linux.pdf'
+-rw-rw-r-- 1 akshay akshay     463 Aug 29 07:15  flow-example.mermaid
+-rw-rw-r-- 1 akshay akshay      25 Aug 30 14:32  img.durga
+-rw-rw-r-- 1 akshay akshay     300 Aug 28 18:39  index.html
+-rw-rw-r-- 1 akshay akshay      58 Aug 28 10:58  README.md
+-rw-rw-r-- 1 akshay akshay     367 Aug 28 11:42 'Session 01.Intoduction.txt'
+-rw-rw-r-- 1 akshay akshay    4870 Aug 29 08:04 'Session 02.Components of Unix & Execution Flow.txt'
+-rw-rw-r-- 1 akshay akshay    3086 Aug 30 14:54 'Session 03.Linux File Ststem.txt'
+-rwxrw-r-- 1 akshay akshay      50 Aug 28 19:11  test.sh
+-rw-rw-r-- 1 akshay akshay     672 Aug 28 18:26  unix-flow-digram.mermaid
+-rw-rw-r-- 1 akshay akshay     710 Aug 28 19:43  user-os-hardware.mermaid
+akshay@Ubuntu:~/Documents/DurgaSoft_Linux$ 
+'''
+
+The first character represents the type of file. 
+d : Directory File 
+- : Normal File 
+l : Link File 
+c : Character Special File 
+b : Block Special File 
+s : Socket File
 
 

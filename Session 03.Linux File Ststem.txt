@@ -125,3 +125,4 @@ b : Block Special File
 s : Socket File
 
 
+Note: c, b, s are representing system files and mostly used by super user (also known as root user or admin user) 

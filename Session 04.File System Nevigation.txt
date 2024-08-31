@@ -1,0 +1,121 @@
+
+Hidden files and hidden directories:
+ls 
+ls -a
+
+
+________________________________
+File System Navigation Commands:
+
+
+Every directory implicitly contains 2 directories: . and ..
+
+. Represents the Current Directory
+.. Represents the Parent Directory
+
+$ cd .
+Changes to the Current Directory (Useless)
+
+$ cd ..
+Changes to the Parent Directory
+
+$ cd
+If no argument is passed, changes to the user's Home Directory
+
+$ cd ~
+~ Represents the User's Home Directory
+Changes to the User's Home Directory
+
+$ cd -
+- Represents the Previous Working Directory
+Changes to the Previous Working Directory
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+akshay@Ubuntu:~/Documents/DurgaSoft_Linux/tempdirectory$ pwd
+/home/akshay/Documents/DurgaSoft_Linux/tempdirectory
+akshay@Ubuntu:~/Documents/DurgaSoft_Linux/tempdirectory$ ls -a
+.  ..
+akshay@Ubuntu:~/Documents/DurgaSoft_Linux/tempdirectory$ 
+
+
+>> cd ../../..
+
+kshay@Ubuntu:~/Documents/DurgaSoft_Linux/tempdirectory$ cd ../../..
+akshay@Ubuntu:~$ pwd
+/home/akshay
+akshay@Ubuntu:~$ 
+
+
+akshay@Ubuntu:~/Documents/DurgaSoft_Linux/tempdirectory$ pwd
+/home/akshay/Documents/DurgaSoft_Linux/tempdirectory
+akshay@Ubuntu:~/Documents/DurgaSoft_Linux/tempdirectory$ ls -a
+.  ..
+akshay@Ubuntu:~/Documents/DurgaSoft_Linux/tempdirectory$ ^C
+akshay@Ubuntu:~/Documents/DurgaSoft_Linux/tempdirectory$ cd ../../..
+akshay@Ubuntu:~$ pwd
+/home/akshay
+akshay@Ubuntu:~$ ^C
+akshay@Ubuntu:~$ cd ~
+akshay@Ubuntu:~$ pwd
+/home/akshay
+akshay@Ubuntu:~$ ls
+Desktop  Documents  Downloads  Music  Pictures  Public  snap  Templates  temporaryfiles  Videos
+akshay@Ubuntu:~$ cd Documents/
+akshay@Ubuntu:~/Documents$ ls
+ DurgaSoft_Linux   LinuxBasics  'Python Workspace'
+akshay@Ubuntu:~/Documents$ cd DurgaSoft_Linux/
+akshay@Ubuntu:~/Documents/DurgaSoft_Linux$ ls
+ directory-hierarchy-linux.mermaid   README.md                                             tempdirectory
+'DurgaSir Linux.pdf'                'Session 01.Intoduction.txt'                           test.sh
+ flow-example.mermaid               'Session 02.Components of Unix & Execution Flow.txt'   unix-flow-digram.mermaid
+ img.durga                          'Session 03.Linux File Ststem.txt'                     user-os-hardware.mermaid
+ index.html                         'Session 04.File System Nevigation.txt'
+akshay@Ubuntu:~/Documents/DurgaSoft_Linux$ cd tempdirectory/
+akshay@Ubuntu:~/Documents/DurgaSoft_Linux/tempdirectory$ cd
+akshay@Ubuntu:~$ cd -
+/home/akshay/Documents/DurgaSoft_Linux/tempdirectory
+akshay@Ubuntu:~/Documents/DurgaSoft_Linux/tempdirectory$ pwd
+/home/akshay/Documents/DurgaSoft_Linux/tempdirectory
+akshay@Ubuntu:~/Documents/DurgaSoft_Linux/tempdirectory$ 
+
+
+Linux File System Hierarchy: 
+
+Linux file system has Tree Like Structure. 
+It starts with root(/). 
+/ is the topmost directory This root directory contains the following important sub directories. bin,sbin,lib,etc,dev,opt,home,usr,tmp,media etc    
+
+1. bin Directory: 
+bin means binary. This directory contains all binary executables related to our linux commands.  
+
+2. sbin Directory: 
+sbin means systembin. It contains all binary executables related to high end admin (super user OR root) commands. 
+Eg: Disk partitioning, network management etc  
+
+
+Q1. What is the difference between bin and sbin? 
+bin contains binary executables related to commands used by normal user. 
+sbin contains binary executables related to commands used by superuser.    
+
+akshay@Ubuntu:~/Documents/DurgaSoft_Linux/tempdirectory$ which touch
+/usr/bin/touch
+akshay@Ubuntu:~/Documents/DurgaSoft_Linux/tempdirectory$ which ls
+/usr/bin/ls
+akshay@Ubuntu:~/Documents/DurgaSoft_Linux/tempdirectory$ which mkdir
+/usr/bin/mkdir
+
+
+3. etc Directory: 
+- This directory contains all system configuration files. These configurations can be used to customize behaviour of linux os. 
+- All users information available in /etc/passwd file. 
+- All groups information available in /etc/group file. 
+- Hosts information (ip address and dns names) available in /etc/hosts file. 
+
+
+akshay@Ubuntu:~/Documents/DurgaSoft_Linux$cd home 
+- not present in this directory 
+
+akshay@Ubuntu:~/Documents/DurgaSoft_Linux$cd /home
+- changes to Parent home directory
+
+

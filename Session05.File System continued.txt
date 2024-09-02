@@ -1,0 +1,4 @@
+
+4. tmp directory:
+
+> tmp means temporary.

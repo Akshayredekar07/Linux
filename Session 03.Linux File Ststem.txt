@@ -95,7 +95,7 @@ Note: short-cut commands to open and close terminal
     - ctrl+d     : To close terminal        
 
 How to check File Type: 
-    - In Ubuntu, blue color files represents directories and all remaining are considered as normal files. This color conventions are varied from flavour to flavour. Hence it is not standard way to check file type.
+    - In Ubuntu, blue color files represents directories and all remaining are considered as normal files. This color conventions are varied from distribution to distribution. Hence it is not standard way to check file type.
 
     - We have to use 'ls -l' command. 
 

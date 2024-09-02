@@ -1,20 +1,26 @@
 
-UNIX/LINUX
+> It is an operating system created in the 1960s.
 
-90% of real time applications are hosted on Linux platform.
+It is FOSS (Freeware and Open Source Software).
 
-What is Unix?
+> UNIX can be used by multiple users simultaneously, making it a Multi-User operating system.
 
->> It is an operating system created in 1960s.
+> Several tasks can be executed simultaneously, hence it is a Multi-Tasking operating system.
 
-Creating multiple directories one time:
->> mkdir dir{1..50}
+> It is user-friendly and provides support for both CUI (Character User Interface) and GUI (Graphical User Interface).
 
+> When compared to Windows, UNIX is more secure.
 
-Creating multiple files one time in specific directory:
->> touch dir{1..50}/file{1..5}
+> 90% of real-time applications are hosted on the Linux platform.
 
-This command will create 5 txt in eahc directory file like file1, file2, ...
+> Creating multiple directories one time: mkdir dir{1..50}
 
+> Creating multiple files one time in a specific directory: touch dir{1..50}/file{1..5}
+This command will create 5 text files in each directory like file1, file2, ...
 
+> With a lot of extensions and improvements to the base version, several distributions have been introduced by organizations/companies (such as Red Hat Linux, Ubuntu, CentOS, Fedora, Slackware, open solaries, Suse, Linux Enterprise server (SLES), Open Suse  
+etc.).
 
+> All these distributions have a lot of similarities.
+If we are proficient with one distribution, we can work on any other distribution easily.
+Note: A detailed list of Linux distributions can be viewed at www.distrowatch.com.

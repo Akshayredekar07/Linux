@@ -1,6 +1,7 @@
 
 1. Components of UNIX:
 ~~~~~~~~~~~~~~~~~~~~~~
+user-os-hardware.mermaid
     
     2 Important Components:
 
@@ -9,25 +10,29 @@
 
 a. shell:
 ~~~~~~~~~
-> It is outer layer of unix operating system.
+> It is the outer layer of the UNIX operating system.
 > Shell reads command whether it is valid command or not.
 > Shell reads command whether it is properly used or not.
-> If everyting is proper then shell interpreats/converts than ccommand into kernal understandable form and handover that to kernal.
-> Shell act as interface between user and kernal.
+> If everything is correct, the shell interprets the command into a kernel-understandable form and hands it over to the kernel.
+> Shell act as interface between user and the kernal.
+
+
 
 b. Kernal:
 ~~~~~~~~~~
-> It is the core component of unix operating system.
-> It is responsible to execute our command with help of hardware components.
-> Memory allocation and process allocation is take care by kernal.
-> It act as interface between shell and hardware components.
+> It is the core component of UNIX operating system.
+> It is responsible for executing commands with the help of hardware components.
+> Memory allocation and process allocation are managed by the kernel.
+> It acts as an interface between the shell and hardware components.
 
 To do a big task we may requires multiple commands:
 
->> gedit test.sh 
->> chmod u+x test.sh 
-execute this commands
->> ./test.sh
+Create a new shell script file using the command:
+>> gedit test.sh  
+Make the shell script executable with the command:
+>> chmod u+x test.sh  
+Execute the shell script using the command:
+>> ./test.sh 
 
 Types of users in Linux system:
 
@@ -59,7 +64,7 @@ ls     : list out all files and directories
 mkdir  : to create a directory
 cd     : change dierctory
 touch  : to create an empty file
-rmidr  : to remove the directory
+rmdir  : to remove the directory
 rm     : to remove a file
 date   : display current date and time
 help   : to display avilable commands

@@ -2,3 +2,56 @@
 4. tmp directory:
 
 > tmp means temporary.
+
+/tmp Directory:
+
+"tmp" stands for "temporary"
+Contains temporary files created in the current session
+Use for files needed only for the current session
+Files in this directory are automatically deleted at system shutdown
+Not recommended for storing permanent files
+
+> gedit demo.txt
+
+Add some data
+
+akshay@Ubuntu:~/Documents/DurgaSoft_Linux$ gedit demo.txt
+akshay@Ubuntu:~/Documents/DurgaSoft_Linux$ cat demo.txt
+add some content here
+add omre extra cotent here
+akshay@Ubuntu:~/Documents/DurgaSoft_Linux$ ls -l demo.txt
+-rw-rw-r-- 1 akshay akshay 49 Sep  4 16:20 demo.txt
+akshay@Ubuntu:~/Documents/DurgaSoft_Linux$ 
+
+>> chmod u-rw demo.txt
+
+
+akshay@Ubuntu:~/Documents/DurgaSoft_Linux$ chmod u-rw demo.txt
+akshay@Ubuntu:~/Documents/DurgaSoft_Linux$ cat demo.txt
+cat: demo.txt: Permission denied
+akshay@Ubuntu:~/Documents/DurgaSoft_Linux$
+
+
+
+akshay@Ubuntu:~/Documents/DurgaSoft_Linux$ gedit demo.txt
+
+not open demo.txt
+
+
+>> chmod u+rw demo.txt 
+this is extra line added after permission updated
+
+akshay@Ubuntu:~/Documents/DurgaSoft_Linux$ chmod u+rw demo.txt
+akshay@Ubuntu:~/Documents/DurgaSoft_Linux$ gedit demo.txt
+akshay@Ubuntu:~/Documents/DurgaSoft_Linux$ cat >> demo.txt
+added last line by akshay 
+akshay@Ubuntu:~/Documents/DurgaSoft_Linux$ cat demo.txt
+add some content here
+add omre extra cotent here
+this is extra line added after permission updated
+
+added last line by akshay 
+akshay@Ubuntu:~/Documents/DurgaSoft_Linux$ 
+
+use ctrl+d from save the date after added by command
+

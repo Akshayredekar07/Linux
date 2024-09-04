@@ -55,3 +55,180 @@ akshay@Ubuntu:~/Documents/DurgaSoft_Linux$
 
 use ctrl+d from save the date after added by command
 
+_______________
+/dev Directory:
+
+
+"dev" stands for "device"
+In Linux, everything is treated as a file, including devices
+Every device is represented as a file
+These files are used to communicate with devices
+All device-related files are stored inside the /dev directory
+
+tty: Terminal-related file
+fd: Floppy drive-related file
+hd: Hard disk-related file
+ram: RAM-related file
+stdin: Standard input device file (keyboard)
+stdout: Standard output device file (terminal/monitor)
+stderr: Standard error device file (terminal/monitor)
+
+
+_______________
+/mnt Directory:
+
+"mnt" stands for "mounting"
+Used for attaching external file systems to the Linux file system
+External sources include:
+Pen drives
+CDs
+External hard disks
+Mounting is the process of attaching these external file systems
+In older operating systems, mounting had to be performed manually
+Recent operating systems generally perform mounting automatically
+Files related to manual mounting are placed inside the /mnt directory
+
+
+7.
+_______________
+/media Directory:
+
+Used for automatically mounted devices
+Files from automatically mounted devices are placed here
+Common examples include:
+
+USB drives
+External hard drives
+CD/DVD drives
+
+Part of the more modern Linux directory structure
+Helps separate automatically mounted devices from manually mounted ones (/mnt)
+
+
+_______________
+Difference between /mnt and /media:
+
+/mnt directory:
+- Contains manually mounted files
+- Used for temporary mounts by system administrators
+
+/media directory:
+- Contains automatically mounted files
+- Used for removable media automatically mounted by the system
+
+
+_______________
+/opt Directory:
+
+"opt" stands for "optional"
+Contains installation files for third-party software
+Used for software not included in the default system installation
+Examples of software typically installed here:
+
+Google Chrome
+Oracle products
+Other manually installed applications
+
+
+Helps keep third-party applications separate from system files
+Allows for easier management of non-standard software
+
+
+_______________
+ lib Directory:
+
+The lib directory stands for "library" and contains essential shared libraries and kernel modules required by the Linux OS, commands, and applications.
+
+
+_______________ 
+var Directory:
+
+var stands for "variable data." It stores data that changes frequently, such as system logs, mail, print spools, and temporary files.
+Log files are a common example of data stored within the var directory.
+
+_______________
+home Directory:
+
+Linux is a multi-user operating system, and each user has a separate directory under home to store their personal files like videos, images, and documents.
+The home directory contains subdirectories for each user. For example, /home/durgasoft is the home directory for the user "durgasoft" and includes folders like Desktop, Downloads, Movies, and Pictures.
+
+_______________
+proc Directory:
+
+proc stands for "processes."
+It contains information about all currently running processes in the system. Each process is represented by a directory named after its Process ID (PID), which stores related process data.
+
+Note: We can find all running proceses information by using ps command. ps means process status. 
+
+Here's the information about the root directory presented in a format similar to the previous responses:
+
+_______________
+root Directory:
+
+It is the home directory of the super user (also known as root user)
+Located at /root in the filesystem hierarchy
+Not to be confused with the / (root) directory of the entire filesystem
+
+Note:
+/home/durgasoft is the Durgasoft User Home Directory
+/root is the Super User Home Directory
+
+_______________
+root Directory: 
+It is the home directory of super user.  
+
+Note: 
+/home/durgasoft - Durgasoft User Home Directory 
+/root - Super User Home Directory
+
+
+Q3 What is the difference between / and Root Directories? 
+/ acts as root for Linux file system. It is the topmost directory of linux file system. root is subdirectory of /, which acts as home directory for the super user. 
+
+ps command:
+
+"ps command===>process status"
+This indicates that the 'ps' command is used to display the status of processes.
+
+Example usage:
+
+The command shown is "$ ps -ef"
+This specific option combination (-ef) typically shows all processes in full format.
+
+/proc directory:
+
+The image explains: "For every process a separate directory will be created inside proc directory to maintain that process specific information.."
+This means that the /proc directory in Linux contains subdirectories, each corresponding to a running process.
+These subdirectories store information specific to their respective processes.
+
+boot Directory:
+
+Contains files required to boot the Linux operating system
+Typically includes the kernel, initial RAM disk, and bootloader configuration
+
+
+usr Directory:
+
+"usr" stands for user
+Contains all user-related software
+Major subdirectories typically include:
+
+/usr/bin: User commands
+/usr/sbin: System administration commands
+/usr/lib: Libraries
+/usr/share: Architecture-independent data
+
+Note: It's worth mentioning that while "usr" is often thought to stand for "user", it historically stood for "Unix System Resources". However, the interpretation as "user" is widely accepted in modern usage.
+Additional Notes on Linux File System:
+
+Advantage:
+The main advantage of the Linux File System is that the operating system can locate required files very easily.
+
+File System Naming:
+Each File System is assigned a separate name.
+
+Linux File System Names:
+Examples include ext2, ext3, ext4, XFS
+
+Windows File System Names:
+Examples include NTFS, FAT

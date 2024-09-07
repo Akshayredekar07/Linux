@@ -1,0 +1,200 @@
+Various Utilities
+To Make Full Screen:
+
+Action: Devices → Insert Guest Additions CD Image
+To Open Terminal:
+
+Shortcut: Ctrl + Alt + T
+To Close Terminal:
+
+Shortcut: Ctrl + D
+To Increase Font Size in Terminal:
+
+Shortcut: Ctrl + Shift + Plus (+)
+To Decrease Font Size in Terminal:
+
+Shortcut: Ctrl + Minus (-)
+To Copy and Paste Between Windows and Ubuntu:
+
+Action: Devices → Shared Clipboard → Bidirectional
+To Drag and Drop Files Between Windows and Ubuntu:
+
+Action: Devices → Drag and Drop → Bidirectional
+
+
+
+ls Command Overview
+
+Command: ls
+
+Description: Lists all files and directories present in the specified directory.
+Manual Documentation: Use man ls to view complete information about the ls command.
+Various Options of ls Command
+
+ls
+
+Description: Displays all files and directories in alphabetical order by name.
+
+ls -r
+
+Description: Displays all files and directories in reverse alphabetical order.
+
+ls | more
+
+Description: Displays content line by line.
+Exit: Press q.
+
+ls | pg
+
+Description: Displays content page by page (20 lines per page).
+Exit: Press q.
+
+ls -l
+
+Description: Displays a detailed long listing of files, including permissions, ownership, size, and modification date.
+
+ls -l -t -r or ls -ltr
+
+Description: Displays files in long listing format.
+Sorts: By modification time and lists in reverse order (youngest files first).
+
+ls -lrt
+
+Description: Similar to the previous command but sorts by time (newest first) and lists in long format.
+
+ls -rlt
+
+Description: Lists in long format, sorted by time (newest first) and in reverse order.
+
+ls -a
+
+Description: Lists all files, including hidden files (those starting with a dot).
+Note: Displays entries . (current directory) and .. (parent directory).
+
+ls -A
+
+Description: Lists all files, including hidden files, but excludes . and ...
+Note: Useful for viewing hidden files without clutter from the current and parent directory entries.
+Count Commands:
+
+ls | wc -l: Counts the number of files in the current directory (returns 18).
+ls -a | wc -l: Counts all files, including hidden ones (returns 21).
+ls -A | wc -l: Counts all files except for . and .. (returns 19).
+ls -F
+
+Description: Displays all files in the current directory, appending a character to indicate file type.
+Indicators:
+/: Directory
+*: Executable file
+@: Symbolic link
+ls -f
+
+Description: Disables color output in the listing; presents the matched files exactly as they are.
+
+ls -i
+
+Description: Displays all files along with their corresponding inode numbers.
+Inode Details: Contains metadata about a file/directory, excluding its name or actual data.
+
+ls -R
+
+Description: Lists all files and directories recursively, including the contents of subdirectories.
+
+ls -s
+
+Description: Displays the number of blocks used by each file or directory (1 block typically equals 1 KB).
+
+ls -h / ls -lh
+
+Description: Displays file sizes in a human-readable format.
+
+
+Inode Information
+Definition:
+An inode (index node) in Linux is a data structure used to represent a file or directory on a filesystem. Each inode contains metadata about a file or directory, including:
+
+File Type: Indicates whether the entry is a regular file, directory, or symbolic link.
+Permissions: Access control information (read, write, execute permissions).
+Owner and Group: User and group ownership of the file.
+Size: The size of the file in bytes.
+Timestamps: Information about the last access, modification, and inode change times.
+Link Count: The number of hard links pointing to the inode.
+Pointers to Data Blocks: Addresses of the actual data blocks where the file's content is stored on the disk.
+Each file or directory is identified by its inode number, which is unique within the filesystem. When accessing a file, the filesystem uses the inode to retrieve the file's metadata and locate its data blocks.
+
+
+Note: If the number of files are very huge, then we can use less and more commands with ls to display page by page.  
+
+Using less and more with ls:
+
+ls -l /etc | more
+Displays the output one page at a time, allowing navigation only in the forward direction.
+Action: Press Space for the next page.
+
+ls -l /etc | less
+Displays the output with both forward and backward navigation capabilities.
+Action: Use Space for the next page and b to go back to the previous page.
+
+Description: If the number of files is very large, you can use less or more commands to display the output page by page.
+Commands:
+$ ls /dev | less
+$ ls /dev | more
+Using head and tail with ls:
+
+Description: To display a fixed number of files either from the top or the bottom of the list.
+Commands:
+$ ls /dev | head -5
+Output: Displays only the top 5 lines.
+$ ls /dev | tail -5
+Output: Displays only the bottom 5 lines.
+Using Options Simultaneously:
+
+Note: You can use options simultaneously with the ls command, and the order of options does not matter.
+Examples: All the following commands are equivalent:
+$ ls -l -t -r
+$ ls -t -r -l
+$ ls -l -r -t
+$ ls -ltr
+$ ls -trl 
+
+
+Q1 Command to Display All Files Including Hidden Files in Last Modification Time Order (Oldest First) with Inode Number and Number of Blocks Used
+Command:
+
+ls -latris  
+Options Explained:
+-l: Long listing format.
+-a: Includes hidden files (files starting with a dot).
+-t: Sorts by modification time, with newest first.
+-r: Reverses the order, so the oldest are shown first.
+-i: Displays the inode number for each file.
+-s: Shows the number of blocks used by each file.
+Sample Output:
+
+131279  4 -rw-r--r--  1 durga durga  807 Jan  3 12:57 .profile  
+131277  4 -rw-r--r--  1 durga durga 3771 Jan  3 12:57 .bashrc  
+162011  4 -rw-r--r--  1 durga durga  220 Jan  3 12:57 .bash_logout  
+132496  4 drwx------  3 durga durga 4096 Jan  3 13:03 .gnupg  
+132517  4 drwx------  3 durga durga 4096 Jan  3 13:03 .local  
+404481  4 drwxr-xr-x  2 durga durga 4096 Jan  3 13:03 Templates  
+
+Q2 Command to List All Files Including Hidden Files Along with Their Inode Numbers
+Command:
+
+ls -ai  
+Options Explained:
+-a: Includes hidden files.
+-i: Displays the inode number for each file.
+This command will provide a list of all files, including hidden ones, with their corresponding inode numbers.
+
+Q3 Command to Make a Long Listing of All Files Including Hidden Files, Sorted by Modification Date (Oldest First)
+Command:
+
+ls -latr  
+Options Explained:
+-l: Long listing format.
+-a: Includes hidden files.
+-t: Sorts by modification time.
+-r: Reverses the sorting order, showing the oldest files first.
+This command will provide detailed information about all files in the directory, including hidden files, sorted from oldest to newest based on the last modification time.
+

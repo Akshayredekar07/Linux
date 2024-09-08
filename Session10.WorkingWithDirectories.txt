@@ -1,0 +1,137 @@
+
+To remove all files 
+rm *
+
+To remove all directories in specific directories 
+rm -r *
+
+
+Working with directories
+__________________________
+
+To create a singe directory: mkdir dir1 
+to create multiple directories  : mkdir dir1 dir2 dir3
+
+mkdir dir1/dir2/dir3 : In this case only dir3 will be created( make sure that dir1 is avialable if not exist dir1 then error will get)
+
+akshay@Ubuntu:~/Documents/DurgaSoft_Linux$ mkdir dir1/dir2/dir3
+mkdir: cannot create directory ‘dir1/dir2/dir3’: No such file or directory
+
+
+4. Complete path of directories:
+
+mkdir -p dir1/dir2/dir3 
+-p means path of directories
+
+mkdir dir0 
+- if i want to move all dir1/dir2/dir3 inside the dir0
+    then 
+
+mv dir1/dir2/dir3 dir0    
+
+```
+sudo apt install tree
+```
+to display tree structure of files : tree /F dir1 
+
+akshay@Ubuntu:~/Documents/DurgaSoft_Linux$ tree /F dir1
+/F  [error opening dir]
+dir1
+├── a.txt
+├── b.txt
+├── c.txt
+└── dir2
+    └── dir3
+
+1 directory, 3 files
+
+
+
+Case Study-1: Film Hero's Manager
+
+heroes
+    ram: jan2020, feb2020, mar2020, ..., dec2022
+    vijay: jan2020, feb2020, mar2020, ..., dec2022
+    mahesh: jan2020, feb2020, mar2020, ..., dec2022
+
+In every month folder:
+Jan2020     
+schedule_1.txt     
+schedule_2.txt     
+...     
+schedule_31.txt    
+
+
+$ mkdir heros 
+$ cd heros
+$mkdir ram vijay mahesh 
+$cd ram 
+mkdir jan2020, fab2020,...dec2020
+
+mkdir ram vijay mahesh  
+
+mkdir -p heros/{ram,vijay,mahesh}/{jan,feb,mar,apr,may,jun,jul,aug,sep,oct,nov,dec}_202{2,3,4}
+
+touch heros/{ram,vijay,mahesh}/{jan,feb,mar,apr,may,jun,jul,aug,sep,oct,nov,dec}_202{2,3,4}/schedule_{1..31}.txt
+
+Case Study-2: 
+~~~~~~~~~~~~~
+Create 5 directories named with dir6,dir7,dir8,dir9 and dir10. 
+In these directories create empty files with a.txt,b.txt,c.txt and d.txt  
+
+$ mkdir dir{6..10} 
+$ touch dir{6..10}/{a..d}.txt  
+
+Note: *,[],{ } etc are called wild characters. 
+We can use wild card characters in every command
+
+Case Study-3:
+~~~~~~~~~~~~~
+/
+└── home
+    └── akshay
+        ├── X
+        │   ├── X1
+        │   │   ├── X11
+        │   │   └── X12
+        │   └── X2
+        └── Y
+            ├── Y1
+            │   ├── Y11
+            │   └── Y12
+            └── Y2
+
+/home/akshay
+
+mkdir x 
+cd x 
+mkdir x1 x2 
+cd x1 
+mkdir x11 x22
+
+mkdir -p x/x1/x1{1,2}
+
+mkdir y  
+cd y  
+mkdir y1 y2  
+cd y1  
+mkdir y11 y22
+
+mkdir -p y/y1/y1{1,2}
+
+kshay@Ubuntu:~$ tree /F x
+/F  [error opening dir]
+x
+└── x1
+    ├── x11
+    └── x12
+
+3 directories, 0 files
+akshay@Ubuntu:~$ tree /F y
+/F  [error opening dir]
+y
+└── y1
+    ├── y11
+    └── y12
+
+3 directories, 0 files

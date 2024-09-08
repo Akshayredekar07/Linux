@@ -1,0 +1,104 @@
+
+We can use date command to display date and time:
+
+Various Options
+````````````````
+date +%D
+
+akshay@Ubuntu:~$ date +%D
+09/08/24
+
+
+date Command:       
+We can use date command to display date and time of system.  
+
+Various Options: 
+ 
+1.  date  +%D 
+      To display only date in the form:    mm/dd/yy  
+2.  date +%T 
+      To display only time in the form: hh:mm:ss   
+3.  date +%d 
+      To display only day value   
+4.  date  +%m 
+      To display only month value  
+5.  date  +%y 
+      To display only year value in yy form  
+6.  date +%Y 
+       To display only year value in yyyy form.  
+7.  date +%H 
+       To display only Hours value (in 24 hours scale format.   
+8.  date +%M 
+       To display only Minutes value  
+9.  date +%S 
+       To display only Seconds value    
+
+
+Example 1: Display Current System Date in dd-mm-yyyy Format
+To display the current date in the format dd-mm-yyyy, 
+
+date +%d-%m-%Y  
+
+Example 2: Create an Empty File with Current Date in the Name
+To create an empty file where the filename contains the current date in ddmmyyyy format, use:
+
+touch "durgajobs$(date +%d%m%Y).log"  
+
+
+Example 3: Create an Empty File with Current Date and Time in the Name
+To create a timestamped file where the filename contains the current date and time in ddmmyyyyHHMMSS format, use:
+
+touch "durgajobs$(date +%d%m%Y%H%M%S).log"  
+
+
+
+Summary of Commands
+Display Current Date (dd-mm-yyyy):
+date +%d-%m-%Y  
+Create an Empty File with Current Date:
+ouch server_$(date +%d%m%Y).log 
+Create a Timestamped File:
+touch server_$(date +%d%m%Y%H%M%S).log
+
+
+akshay@Ubuntu:~/Documents/DurgaSoft_Linux$ touch server_$(date +%d%m%Y).log
+akshay@Ubuntu:~/Documents/DurgaSoft_Linux$ touch server_$(date +%d%m%Y%H%M%S).log
+
+
+cal Command
+Display Current Month Calendar:
+
+cal  
+This command will display the calendar for the current month.
+Display Total Year Calendar (e.g., 2020):
+
+cal 2020  
+This command shows the entire calendar for the year 2020.
+Display 1st Year Calendar:
+
+cal 1  
+
+This command displays the calendar for the year 1 AD.
+Display 9999th Year Calendar:
+
+cal 9999  
+
+This command displays the calendar for the year 9999.
+Invalid Year (Year 10000):
+
+cal 10000  
+This will return an error message:
+cal: year '10000' not in range 1..9999  
+The cal command supports years only from 1 to 9999.
+Display Specific Month and Year (e.g., August 2019):
+
+cal 08 2019  
+
+This command displays the calendar for August 2019.
+Summary of cal Command Usage
+Current Month: cal
+Entire Year: cal <year> (e.g., cal 2020)
+First Year: cal 1
+Last Supported Year: cal 9999
+Invalid Year Example: cal 10000 (will return an error)
+Specific Month and Year: cal <month> <year> (e.g., cal 08 2019)

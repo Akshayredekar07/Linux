@@ -1,0 +1,193 @@
+
+How to remove Directories:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ We can remove directories by using rmdir command.
+1. $ rmdir dir1
+ To remove empty directory dir1
+
+2. $ rmdir dir1 dir2 dir3
+
+ To remove multiple empty directories
+
+Note: rmdir command will work only for empty directories. If the directory is not empty
+then we will get error. We cannot use rmdir for files. Hence the most useless (waste
+command in linux is rmdir.
+
+akshay@Ubuntu:~/Documents/DurgaSoft_Linux/dir1$ rmdir dir1
+rmdir: failed to remove 'dir1': No such file or directory
+
+If the directory is not empty then to remove that directory we should use rm command.
+All internal content also will be removed. rm command can work for files also. Hence rm is
+recommended to use than rmdir.
+
+Akshay@Ubuntu:~/Documents/DurgaSoft_Linux/dir1$ rm dir1
+rm: cannot remove 'dir1': No such file or directory
+
+
+Whenever we are using rm command for directories, we should use -r or -R option. Here
+case is not important.
+
+$ rm -r heros
+$ rm -R heros
+
+Note: In Linux operating system, there is no way to perform undo operation. Once we
+delete a file or directory, it is impossible to retrieve that. Hence while using rm command
+we have to take special care.
+The following command is the most dangerous command in linux, because it removes
+total file system.
+
+Various options with rm Command:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1 interactive Option(-i
+While removing files and directories, if we want confirmation then we have to use -i
+option.
+akshay@Ubuntu:~/Documents/DurgaSoft_Linux$ rm -ri dir1
+rm: descend into directory 'dir1'? y
+rm: remove regular empty file 'dir1/c.txt'? y
+rm: remove regular empty file 'dir1/b.txt'? y
+rm: remove directory 'dir1'? y
+
+2 force removal(-f:
+~~~~~~~~~~~~~~~~~~~~
+While removing files and directories, if we don't want any error messages, then we should
+use -f option. It is opposite to -i option.
+
+akshay@Ubuntu:~/Documents/DurgaSoft_Linux$ rm -r dir77
+akshay@Ubuntu:~/Documents/DurgaSoft_Linux$ rm -rf dir77
+akshay@Ubuntu:~/Documents/DurgaSoft_Linux$ 
+
+kshay@Ubuntu:~/Documents/DurgaSoft_Linux$ rm -rf dir99
+akshay@Ubuntu:~/Documents/DurgaSoft_Linux$ 
+
+Even dir99 is not available, we won't get any error message, because we used -f option.
+
+3. verbose Option(-v:
+~~~~~~~~~~~~~~~~~~~~~~
+If we want to know the sequence of removals on the screen we should go for -v option.
+akshay@Ubuntu:~/Documents/DurgaSoft_Linux$ rm -r dir6
+akshay@Ubuntu:~/Documents/DurgaSoft_Linux$ rm -rv dir8
+removed directory 'dir8/c.txt'
+removed directory 'dir8/d.txt'
+removed directory 'dir8/a.txt'
+removed directory 'dir8/b.txt'
+removed directory 'dir8'
+akshay@Ubuntu:~/Documents/DurgaSoft_Linux$ 
+
+
+## Q1: What is the difference between the following two commands?
+
+- `$ mkdir dir1/dir2/dir3`
+- `$ mkdir -p dir1/dir2/dir3`
+
+`mkdir dir1/dir2/dir3`:  
+Only `dir3` will be created, and `dir1` and `dir2` must already exist. If they don't, this command will fail.
+
+`mkdir -p dir1/dir2/dir3`:  
+The `-p` option means creating the complete path. All three directories will be created.
+
+---
+
+## Q2: What is the advantage of using the `rm` command over the `rmdir` command when removing directories?
+
+The `rmdir` command only works for empty directories, whereas the `rm` command works for both empty and non-empty directories. You can also use `rm` for files.
+
+---
+
+## Q3: Assume that `dir1` is an empty directory. Which of the following commands will remove `dir1`?
+
+- `rm dir1`
+- `remove dir1`
+- `rmdir dir1`
+- `del dir1`
+
+**Answer**: `rmdir dir1`
+
+---
+
+## Q4: Assume that `dir1` is a non-empty directory. Which of the following commands will remove `dir1`?
+
+- `rmdir dir1`
+- `rm -R dir1`
+- `rm -i dir1`
+- `rm -f dir1`
+- `rm -v dir1`
+
+**Answer**: `rm -R dir1`
+
+---
+
+## Q5: Assume that `dir1` is a non-empty directory and `text1` is a text file. Which of the following commands will remove both `dir1` and `text1` successfully?
+
+- `rm text1 dir1`
+- `rm -v text1 dir1`
+- `rm -R text1 dir1`
+
+**Answer**: `rm -R text1 dir1`
+
+---
+
+## Q6: How to create a directory called `pythonclasses` in the `Videos` directory within the user's home directory?
+
+```bash
+$ mkdir ~/Videos/pythonclasses
+```
+
+---
+
+## Q7: How to create a directory named `A`, inside that a directory `B`, and inside that a directory `C`?
+
+```bash
+$ mkdir -p A/B/C
+```
+
+---
+
+## Q8: How many directories will be created after running the following command?
+
+```bash
+$ mkdir {a..c}{1..3}
+```
+
+**Answer**: Nine directories: `a1`, `a2`, `a3`, `b1`, `b2`, `b3`, `c1`, `c2`, `c3`.
+
+---
+
+## Q9: To create a directory named `Java Classes`, is the following command valid?
+
+```bash
+$ mkdir java classes
+```
+
+This command will create two directories: `java` and `classes`. To create a single directory with spaces in the name, use:
+
+```bash
+$ mkdir "java classes"
+```
+
+**Note**: It's not recommended to use spaces in file or directory names. Instead, use underscores, like `java_classes`.
+
+
+**What is the advantage of using `rm` command over `rmdir` command while removing directories?**
+
+* `rm` can work for any directory whether it is empty or not.
+* `rmdir` can work only to remove empty directories.
+
+**How to remove directories named dir1 to dir10?**
+
+**Using `rm -r`:**
+  ```bash
+rm -r dir{1..10}
+```
+**Using `rmdir` (only for empty directories):**
+```bash
+rmdir dir{1..10}
+```
+**How to remove all empty directories that start with the letter "d"?**
+```bash
+rmdir d*
+```
+**How to remove all empty directories that start with "d" and end with "n"?**
+```bash
+rmdir d*n
+```

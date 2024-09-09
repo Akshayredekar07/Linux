@@ -190,3 +190,13 @@ rmdir d*
 ```bash
 rmdir d*n
 ```
+
+**To Remove 3 Empty Directories dir2, dir4, dir6**
+```bash
+rmdir dir{2,4,6}
+```
+
+**To Remove Directoreis where Name Starts with 'd' OR 'x'**
+```bash
+rmdir [dx]*
+```

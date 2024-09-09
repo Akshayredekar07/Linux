@@ -1,0 +1,76 @@
+
+Absolute Path vs Relative Path:
+Absolute Path: It is the path from root(/) to destination. ie it is complete path.
+
+Relative Path: It is the path from current working directory to destination directory.It is
+always wrt current location
+
+home
+  └── akshay
+      |___Desktop
+          ├── X
+          │   ├── X1
+          │   │   ├── X11
+          │   │   └── X12
+          │   └── X2
+          └── Y
+              ├── Y1
+              │   ├── Y11
+              │   └── Y12
+              └── Y2
+
+mkdir test
+cd test
+mkdir -p x/x1/x1{1,2} x/x2 y/y1/y1{1,2} y/y2 
+
+akshay@Ubuntu:~/Documents/DurgaSoft_Linux$ tree /F test
+/F  [error opening dir]
+test
+├── x
+│   ├── x1
+│   │   ├── x11
+│   │   └── x12
+│   └── x2
+└── y
+    ├── y1
+    │   ├── y11
+    │   └── y12
+    └── y2
+
+
+Eg 1: Assume we are in x11 directory. To change to y2 directory
+
+Absolute Path:
+ $ cd /home/akshay/Desktop/y/y2
+ $ cd ~/Desktop/y/y2
+
+Relative Path:
+ $ cd ./../../../y/y2
+ $ cd ../../../y/y2
+
+akshay@Ubuntu:~/Desktop$ mkdir -p x/x1/x1{1,2} x/x2 y/y1/y1{1,2} y/y2
+akshay@Ubuntu:~/Desktop$ cd /home/akshay/Desktop/y/y2
+akshay@Ubuntu:~/Desktop/y/y2$ cd -
+/home/akshay/Desktop
+akshay@Ubuntu:~/Desktop$ cd ../../../y/y2
+bash: cd: ../../../y/y2: No such file or directory
+akshay@Ubuntu:~/Desktop$ 
+
+
+Eg 2: Assume we are in y2 directory. To change to x11
+Absolute Path:
+ $ cd /home/akshay/Desktop/x/x1/x11
+ $ cd ~/Desktop/x/x1/x11
+
+Relative Path:
+ $ cd ../../x/x1/x11
+
+
+Eg 3: Assume we are in x11 directory. To create y21 directory inside y2 without enter into
+y2 directory.
+Absolute Path:
+ $ mkdir /home/akshay/Desktop/y/y2/y21
+ $ mkdir ~/Desktop/y/y2/y21
+
+Relative Path:
+ $ mkdir ../../../y/y2/y21 

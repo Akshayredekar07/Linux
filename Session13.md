@@ -1,7 +1,7 @@
 
 ### Copying files:
 
-To copy content not one file to another file:
+To copy content from one file to another file:
 
 Syntax
 ```bash
@@ -117,6 +117,7 @@ dir4
 ```
 
 **5. To Copy Multiple Directories into a Directory:**
+
 ```bash
 cp -r dir1 dir2 dir3 dir4 dir5
 ```
@@ -170,7 +171,8 @@ We will discuss solution in the next classes.
 
 - Both moving and renaming activities can be performed by using single command: `mv`
 
-**1. Renaming of files:  **
+**1. Renaming of files:**
+
 syntax:
 ```bash
 mv oldname newname
@@ -187,7 +189,7 @@ mv dir1  dir1111
 ```
 - dir1 will be renamed to dir1111
 
-**3. Moving files to directory: ** 
+**3. Moving files to directory:** 
 
 ```bash
 mv a.txt b.txt c.txt dir1
@@ -232,7 +234,8 @@ dir2
 0 directories, 3 files  
 ```
 
-**5. Moving total directory to another directory:  **
+**5. Moving total directory to another directory:**
+
 ```bash
 mv dir1 dir2
 ```

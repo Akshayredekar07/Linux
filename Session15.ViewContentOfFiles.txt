@@ -1,0 +1,18 @@
+
+View Content of the Files
+
+We can view the content of a file by using the following commands:
+
+cat
+tac
+rev
+head
+tail
+less
+more
+
+1. View Content of the File by using cat Command:
+
+cat < file1.txt 
+
+cat file1.txt  

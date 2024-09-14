@@ -13,6 +13,49 @@ more
 
 1. View Content of the File by using cat Command:
 
-cat < file1.txt 
+```
+akshay@Ubuntu:~/Documents/Durga`s/files$ cat -n abc.txt
+     1	linux 
+     2	mango
+     3	
+     4	apple 
+     5	data science
+     6	
+     7	machine learning
+     8	devops 
+     9	AWS
+    10	
+    11	Java
+    12	python
+akshay@Ubuntu:~/Documents/Durga`s/files$ cat -b abc.txt
+     1	linux 
+     2	mango
 
-cat file1.txt  
+     3	apple 
+     4	data science
+
+     5	machine learning
+     6	devops 
+     7	AWS
+
+     8	Java
+     9	python
+```
+
+1) To create new file with some content
+$ cat > filename
+ data
+ ctrl+d
+ 
+2) To append some extra data to existing file
+$ cat >> filename
+ extra data
+ ctrl+d
+3) To view content of file
+ $ cat < filename or $ cat filename
+4) Copy content of one file to another file
+ $ cat input.txt > output.txt
+5) To copy content of multiple files to a single file
+ $ cat file1.txt file2.txt file3.txt > file4.txt
+6) Merging/appending of one file content to another file
+ $ cat file1.txt >> file2.txt

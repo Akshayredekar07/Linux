@@ -1,0 +1,16 @@
+Hello
+this file cotent added at the time of file creatation
+graph TD
+    A[End user types a command on the terminal] -->|e.g., touch durga.txt| B[Command submitted to the Shell]
+    B --> C{Shell checks if the command is valid and properly used}
+    C -->|Not proper| D[Display error message to the terminal]
+    C -->|Proper| E[Shell interprets command and hands it over to the Kernel]
+    E --> F[Kernel executes the command and performs the required action]
+    F --> G[$ prompt is displayed, ready for the next command]
+graph TD
+    A[End user types a command on the terminal] -->|e.g., touch durga.txt| B[Command submitted to the Shell]
+    B --> C{Shell checks if the command is valid and properly used}
+    C -->|Not proper| D[Display error message to the terminal]
+    C -->|Proper| E[Shell interprets command and hands it over to the Kernel]
+    E --> F[Kernel executes the command and performs the required action]
+    F --> G[$ prompt is displayed, ready for the next command]

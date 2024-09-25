@@ -59,3 +59,13 @@ $ cat >> filename
  $ cat file1.txt file2.txt file3.txt > file4.txt
 6) Merging/appending of one file content to another file
  $ cat file1.txt >> file2.txt
+
+
+
+2. tac Command:
+It is the reverse of cat.
+It will display file content in reverse order of lines. i.e first line will become last line and
+last line will become first line.
+This is vertical reversal.
+
+

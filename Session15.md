@@ -80,42 +80,90 @@ cat input.txt > output.txt
 ```  
 5) To copy the content of multiple files to a single file:  
 ```bash
-cat file1.txt file2.txt file3.txt > file4.txt  
+cat file1.txt file2.txt file3.txt > file4.txt # overwrite file4.txt content
+cat file1.txt file2.txt file3.txt >> file4.txt # append to file4.txt  
 ```  
 6) To append the content of one file to another:  
 ```bash
 cat file1.txt >> file2.txt  
 ```  
 
+- `cat` command will display total file content at a time. It is best suitable for the small files, If the files contains thousand lines of content then it is not recommended to use cat command, For this requirement we should go for `head`, `tail`, `more`, `less`
+
 #### 2. `tac` Command:  
 - It displays the file content in reverse order of lines (vertical reversal):  
 ```bash
 tac abc.txt  
-MAT  
-RAT  
-CAT  
 ```  
+
+```bash
+akshay@Ubuntu:~/Desktop$ cat abc.txt
+Java
+Python 
+
+Mango 
+Berreis
+Bananas
+
+Devops
+CI/CD
+
+akshay@Ubuntu:~/Desktop$ tac abc.txt
+CI/CD
+Devops
+
+Bananas
+Berreis
+Mango 
+
+Python 
+Java
+```
 
 #### 3. `rev` Command:  
 - It reverses each line content (horizontal reversal):  
 ```bash
 rev abc.txt  
-TAC  
-TAR  
-TAM  
 ```  
+
+```bash
+akshay@Ubuntu:~/Desktop$ cat abc.txt
+Java
+Python 
+
+Mango 
+Berreis
+Bananas
+
+Devops
+CI/CD
+akshay@Ubuntu:~/Desktop$ rev abc.txt
+avaJ
+ nohtyP
+
+ ognaM
+sierreB
+sananaB
+
+spoveD
+DC/IC
+```
+
 
 #### 4. `head` Command:  
 - To view the top few lines of the file:  
+
 ```bash
 head file1.txt  
 ```
 - Default: displays the top 10 lines.  
 - To display the top 30 lines:  
+
 ```bash
 head -n 30 file1.txt  
 ```
 or  
+
 ```bash
 head -30 file1.txt  
 ```  
@@ -123,6 +171,7 @@ head -30 file1.txt
 ```bash
 head -n -20 file1.txt  
 ```  
+- In linux every character takes one byte
 - To display the first 100 bytes:  
 ```bash
 head -c 100 file1.txt  
@@ -130,17 +179,20 @@ head -c 100 file1.txt
 
 #### 5. `tail` Command:  
 - To view the last few lines of the file:  
+
 ```bash
 tail file1.txt  
 ```
 - Default: displays the last 10 lines.  
 - To display the last 30 lines:  
+
 ```bash
 tail -n 30 file1.txt  
-```
-or  
-```bash
+# or  
+tail -n -30 file1.txt
+# or  
 tail -30 file1.txt  
+# All doing the same thing
 ```  
 - To display lines from the 4th to the last:  
 ```bash
@@ -173,9 +225,9 @@ less file1.txt
 #### Examples:  
 - To display lines from the 3rd to 7th:  
 ```bash
-head -7 demo.txt | tail -5  
+head -7 file1.txt | tail -5  
 ```  
 - To display lines from the 21st to 30th:  
 ```bash
-head -30 demo.txt | tail -10  
+head -30 file1.txt | tail -10  
 ```  

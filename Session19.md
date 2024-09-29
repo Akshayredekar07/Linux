@@ -8,7 +8,7 @@ We can compare the data of two files by using the following commands:
 4. **vidiff**
 5. **comm**
 
- 1. cmp Command:
+### 1. cmp Command:
 It compares files byte by byte.
 
 ```bash

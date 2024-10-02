@@ -8,14 +8,14 @@ This sorts the content based on **alphabetical order**.
 
 ### Example:
 ```bash
-akshay@Ubuntu:~/Desktop cat a.txt
+akshay@Ubuntu:~/Desktopcat a.txt
 Sunny  
 Bunny  
 Chinny  
 Pinny  
 Vinny  
 
-akshay@Ubuntu:~/Desktop sort a.txt  
+akshay@Ubuntu:~/Desktopsort a.txt  
 Bunny  
 Chinny  
 Pinny  
@@ -41,7 +41,7 @@ sort -ru a.txt > sorted.txt
 
 ### Sorting File Alphabetically:
 ```bash
- sort a.txt  
+sort a.txt  
 Bunny  
 Chinny  
 Pinny  
@@ -51,7 +51,7 @@ Vinny
 
 ### Sorting in Reverse Alphabetical Order:
 ```bash
- sort -r a.txt  
+sort -r a.txt  
 Vinny  
 Sunny  
 Pinny  
@@ -61,7 +61,7 @@ Bunny
 
 ### Sorting Alphanumeric Data:
 ```bash
- cat a.txt
+cat a.txt
 7  
 Sunny  
 8  
@@ -73,7 +73,7 @@ Vinny
 5  
 Pinny  
 
- sort a.txt
+sort a.txt
 1  
 5  
 6  
@@ -88,7 +88,7 @@ Vinny
 
 ### Sorting Alphanumeric Data in Reverse Order:
 ```bash
- sort -r a.txt  
+sort -r a.txt  
 Vinny  
 Sunny  
 Pinny  
@@ -104,14 +104,14 @@ Bunny
 ### Sorting Numeric Data:
 By default, the `sort` command does not sort numbers numerically but based on their string (digit-wise) representation.
 ```bash
- cat a.txt  
+cat a.txt  
 11  
 2  
 7  
 2222222  
 9  
 
- sort a.txt  
+sort a.txt  
 11  
 2  
 2222222  
@@ -121,7 +121,7 @@ By default, the `sort` command does not sort numbers numerically but based on th
 
 #### Sorting Numbers Numerically Using the `-n` Option:
 ```bash
- sort -n a.txt  
+sort -n a.txt  
 2  
 7  
 9  
@@ -132,7 +132,7 @@ By default, the `sort` command does not sort numbers numerically but based on th
 ### Sorting with Unique Lines:
 By default, `sort` includes all lines, including duplicates. Use the `-u` option to display only unique lines:
 ```bash
- cat a.txt  
+cat a.txt  
 1  
 1  
 2  
@@ -141,7 +141,7 @@ Sunny
 Sunny  
 Bunny  
 
- sort -u a.txt  
+sort -u a.txt  
 1  
 2  
 Bunny  
@@ -152,19 +152,19 @@ Sunny
 
 1. **Sort Based on File Size (Ascending Order)**:
    ```bash
-    ls -l /etc | head -10 | sort -k 5n
+   ls -l /etc | head -10 | sort -k 5n
    ```
    This command sorts based on the 5th column (file size) in ascending order.
 
 2. **Sort Based on Month**:
    ```bash
-    ls -l /etc | head -10 | sort -k 6M
+   ls -l /etc | head -10 | sort -k 6M
    ```
    This sorts by the 6th column (month) in ascending order.
 
 3. **Sort Based on Number of Links (Descending Order)**:
    ```bash
-    ls -l /etc | head -10 | sort -k 2nr
+   ls -l /etc | head -10 | sort -k 2nr
    ```
    Sorts based on the 2nd column (number of links) in descending order.
 
@@ -198,13 +198,13 @@ ls -l /etc | head -10 | sort -k 2nr
 
 1. **Find Lowest Salary Record**:
    ```bash
-    sort -k 3n -t ":" emp.txt | head -1
+   sort -k 3n -t ":" emp.txt | head -1
    ```
    This finds the employee with the lowest salary.
 
 2. **Find Highest Salary Record**:
    ```bash
-    sort -k 3nr -t ":" emp.txt | head -1
+   sort -k 3nr -t ":" emp.txt | head -1
    ```
    This finds the employee with the highest salary.
 
@@ -214,7 +214,7 @@ The `uniq` command is used to display unique lines. However, the file needs to b
 
 #### Example (Without Sorting):
 ```bash
- cat a.txt  
+cat a.txt  
 Sunny  
 sunny  
 Bunny  
@@ -223,7 +223,7 @@ Sunny
 Bunny  
 Chinny  
 
- uniq a.txt  
+uniq a.txt  
 Sunny  
 sunny  
 Bunny  
@@ -236,7 +236,7 @@ Without sorting, `uniq` doesn't remove duplicates correctly.
 
 #### Correct Usage (With Sorting):
 ```bash
- sort a.txt | uniq  
+sort a.txt | uniq  
 Bunny  
 Chinny  
 sunny  
@@ -247,7 +247,7 @@ Sunny
 
 1. **To Display Only Duplicate Lines**:
    ```bash
-    sort a.txt | uniq -d  
+   sort a.txt | uniq -d  
    Bunny  
    Chinny  
    Sunny
@@ -255,7 +255,7 @@ Sunny
 
 2. **To Display the Number of Occurrences of Each Line**:
    ```bash
-    sort a.txt | uniq -c  
+   sort a.txt | uniq -c  
      2 Bunny  
      2 Chinny  
      1 sunny  
@@ -264,7 +264,7 @@ Sunny
 
 3. **To Ignore Case While Comparing**:
    ```bash
-    sort a.txt | uniq -i  
+   sort a.txt | uniq -i  
    Bunny  
    Chinny  
    sunny  
@@ -273,6 +273,6 @@ Sunny
 
 4. **To Display Only Unique Lines (Lines Not Duplicated)**:
    ```bash
-    sort a.txt | uniq -u  
+   sort a.txt | uniq -u  
    sunny
    ```

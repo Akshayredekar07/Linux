@@ -1,0 +1,423 @@
+
+
+
+
+## Sorting File Content
+
+We can sort data in a file using the `sort` command.  
+```
+sort filename
+```
+Here, sorting is based on **alphabetical order**.
+
+### Example:
+```bash
+akshay@Ubuntu:~/Desktop$ cat a.txt 
+Sunny
+Bunny
+Chinny
+Pinny
+Vinny
+akshay@Ubuntu:~/Desktop$ sort a.txt 
+Bunny
+Chinny
+Pinny
+Sunny
+Vinny
+```
+- To save the sorted content into anther file `sorted.txt` use the command
+```bash
+sort a.txt > sorted.txt
+``` 
+
+To sort the content based on reverse alphabetical order, use the `-r` option:  
+```bash
+sort -r a.txt > sorted.txt
+```
+
+#### To remove duplicate lines:
+```bash
+sort -u a.txt | tac > sorted.txt
+sort -ru a.txt > sorted.txt
+```
+
+
+### Output after sorting:
+```bash
+-rw-r--r-- 1 root root 401 May 29 2017 anacrontab
+-rw-r--r-- 1 root root 433 Oct 2 2017 apg.conf
+-rw-r--r-- 1 root root 3028 Aug 6 00:28 adduser.conf
+drwxr-xr-x 2 root root 4096 Nov 7 19:47 alternatives
+```
+
+### Sorting File Alphabetically
+```bash
+$ sort a.txt 
+Bunny
+Chinny
+Pinny
+Sunny
+Vinny
+```
+
+### Sorting in Reverse Alphabetical Order:
+```bash
+$ sort -r a.txt
+Vinny
+Sunny
+Pinny
+Chinny
+Bunny
+```
+
+### Sorting Alphanumeric Data:
+```bash
+# The file `a.txt` contains the alphanumeric data 
+# then sorting will happen in the following order
+# - first sort the numeric data and then alphabetical symbols
+
+$ cat a.txt
+7
+Sunny
+8
+Bunny
+1
+Chinny
+6
+Vinny
+5
+Pinny
+# sort command
+$ sort a.txt
+1
+5
+6
+7
+8
+Bunny
+Chinny
+Pinny
+Sunny
+Vinny
+```
+
+### Reverse Sort:
+```bash
+$ sort -r a.txt
+Vinny
+Sunny
+Pinny
+Chinny
+Bunny
+8
+7
+6
+5
+1
+```
+
+### Sorting Numeric Data:
+When the file contains only numbers, sorting is not based on numeric value by default:
+It based on digit
+```bash
+$ cat > a.txt
+11
+2
+7
+2222222
+9
+#sort
+$ sort a.txt
+11
+2
+2222222
+7
+9
+```
+
+#### Sorting Numerically Using the `-n` Option:
+```bash
+$ sort -n a.txt
+2
+7
+9
+11
+2222222
+```
+
+### Sorting with Unique Lines:
+By default, `sort` displays duplicate lines. Use the `-u` option to get unique lines.
+```bash
+$ cat a.txt
+1
+1
+2
+2
+Sunny
+Sunny
+Bunny
+
+$ sort a.txt
+1
+1
+2
+2
+Bunny
+Sunny
+Sunny
+
+#only uniques lines gets
+$ sort -u a.txt
+1
+2
+Bunny
+Sunny
+```
+
+### Commands for Sorting Tabular Data
+
+1. **Sort Based on File Size (Ascending Order)**:
+   ```bash
+   $ ls -l /etc | head -10 | sort -k 5n
+   ```
+   - Sorts based on the 5th column (file size) in ascending order.
+
+2. **Sort Based on Month**:
+   ```bash
+   $ ls -l /etc | head -10 | sort -k 6M
+   ```
+   - Sorts based on the 6th column (date) by month in ascending order.
+
+3. **Sort Based on Number of Links (Descending Order)**:
+   ```bash
+   $ ls -l /etc | head -10 | sort -k 2nr
+   ```
+   - Sorts based on the 2nd column (number of links) in descending order (`n` for numeric and `r` for reverse).
+
+## Sorting Tabular Data Using the `-k` Option:
+- The `-k` option is used to sort based on a specific **key (column)**.  
+Example:
+```bash
+ls -l /etc | head -10
+```
+
+Sample Output:
+```bash
+akshay@Ubuntu:~/Desktop$ ls -l /etc | head -5
+total 1148
+drwxr-xr-x  3 root root    4096 Feb 21  2024 acpi
+-rw-r--r--  1 root root    3028 Feb 21  2024 adduser.conf
+drwxr-xr-x  3 root root    4096 Feb 21  2024 alsa
+drwxr-xr-x  2 root root    4096 Sep 29 09:10 alternatives
+```
+
+To sort based on **file size** (5th column) in ascending order:
+```bash
+ls -l /etc | head -10 | sort -k 5n
+```
+
+Sample Output
+```bash
+akshay@Ubuntu:~/Desktop$ ls -l /etc | head -10 | sort -k 5n
+total 1148
+-rw-r--r--  1 root root     335 Mar 23  2022 anacrontab
+-rw-r--r--  1 root root     433 Mar 23  2022 apg.conf
+-rw-r--r--  1 root root    3028 Feb 21  2024 adduser.conf
+drwxr-xr-x  2 root root    4096 Sep 29 09:10 alternatives
+drwxr-xr-x  3 root root    4096 Feb 21  2024 acpi
+drwxr-xr-x  3 root root    4096 Feb 21  2024 alsa
+drwxr-xr-x  3 root root    4096 Sep  8 15:36 apparmor
+drwxr-xr-x  5 root root    4096 Feb 21  2024 apm
+drwxr-xr-x  8 root root    4096 Sep  8 15:37 apparmor.d
+```
+
+#### Note:
+- You can combine options like `-ur` and `-un`.
+- The `uniq` command is specifically for working with unique data.
+
+### Sorting Based on Month:
+The 6th column provides the month information. Use the `M` option to sort by month:
+```bash
+ls -l /etc | head -5 | sort -k 6M
+
+# Sample output
+kshay@Ubuntu:~/Desktop$ ls -l /etc | head -5 | sort -k 6M
+total 1148
+drwxr-xr-x  3 root root    4096 Feb 21  2024 acpi
+drwxr-xr-x  3 root root    4096 Feb 21  2024 alsa
+-rw-r--r--  1 root root    3028 Feb 21  2024 adduser.conf
+drwxr-xr-x  2 root root    4096 Sep 29 09:10 alternatives
+```
+
+### Sorting Based on Number of Links in Descending Order:
+```bash
+ls -l /etc | head -10 | sort -k 2nr
+
+# Sample output
+akshay@Ubuntu:~/Desktop$ ls -l /etc | head -10 | sort -k 2nr
+total 1148
+drwxr-xr-x  8 root root    4096 Sep  8 15:37 apparmor.d
+drwxr-xr-x  5 root root    4096 Feb 21  2024 apm
+drwxr-xr-x  3 root root    4096 Feb 21  2024 acpi
+drwxr-xr-x  3 root root    4096 Feb 21  2024 alsa
+drwxr-xr-x  3 root root    4096 Sep  8 15:36 apparmor
+drwxr-xr-x  2 root root    4096 Sep 29 09:10 alternatives
+-rw-r--r--  1 root root    3028 Feb 21  2024 adduser.conf
+-rw-r--r--  1 root root     335 Mar 23  2022 anacrontab
+-rw-r--r--  1 root root     433 Mar 23  2022 apg.conf
+```
+
+`emp.txt`
+```
+800: Avinash:500:Warangal
+100: Yashwant: 1000:Mumbai
+200: Omkar: 2000: Chennai
+300: Chinmay: 3000: Hyderabad
+600: Shreya:6000: Hyderabad
+400: Vaibhav:4000:Delhi
+500: Pragati:5000:Hyderabad
+700: Shailesh:7000:Ranchi
+```
+
+### Find Lowest and Highest Salaries?
+
+1. **Lowest Salary Record**:
+   ```bash
+   $ sort -k 3n -t ":" emp.txt | head -1
+   ```
+
+2. **Highest Salaried Employee Information**:
+   ```bash
+   $ sort -k 3n -t ":" emp.txt | tail -1
+   $ sort -k 3nr -t ":" emp.txt | head -1
+   ```
+
+### Explanation:
+- **`-k 3n`**: Sorts by the 3rd column numerically.
+- **`-t ":"`**: Specifies that the colon `:` is used as the field delimiter.
+- **`head -1`**: Outputs the first record (lowest salary).
+- **`tail -1`**: Outputs the last record (highest salary in ascending sort).
+- **`-k 3nr`**: Sorts by the 3rd column numerically but in reverse (descending) order, displaying the highest salaried employee.
+
+
+
+### Find Unique Content in the File Using `uniq` Command
+
+- We can use the `uniq` command to display unique content in a file.
+- However, to use `uniq` properly, the file must be **sorted**, otherwise, it won't work as expected.
+
+#### Example:
+
+```bash
+$ cat a.txt
+Sunny
+sunny
+Bunny
+Chinny
+Sunny
+Bunny
+Chinny
+```
+
+#### Incorrect Usage (Without Sorting):
+
+```bash
+$ uniq a.txt
+Sunny
+sunny
+Bunny
+Chinny
+Sunny
+Bunny
+Chinny
+```
+
+- Without sorting, the `uniq` command doesn't work correctly.
+
+#### Correct Usage (With Sorting):
+
+```bash
+$ sort a.txt | uniq
+Bunny
+Chinny
+sunny
+Sunny
+```
+
+### `uniq` Command Options:
+
+- **`-d`**: To display only duplicate lines.
+   ```bash
+   $ sort a.txt | uniq -d
+   Bunny
+   Chinny
+   Sunny
+   ```
+
+- **`-c`**: To display the number of occurrences of each line.
+   ```bash
+   $ sort a.txt | uniq -c
+      2 Bunny
+      2 Chinny
+      1 sunny
+      2 Sunny
+   ```
+
+- **`-i`**: Ignore case while comparing.
+   ```bash
+   $ sort a.txt | uniq -i
+   Bunny
+   Chinny
+   Sunny
+   ```
+
+- **`-u`**: To display only unique lines (lines that are not duplicated).
+   ```bash
+   $ sort a.txt | uniq -u
+   sunny
+
+### `uniq` Command Usage with Options
+
+1. **To Display Only Duplicate Lines**:
+   ```bash
+   $ sort a.txt | uniq -d
+   Bunny
+   Chinny
+   Sunny
+   ```
+   - This command lists only the lines that appear more than once in the sorted file.
+
+2. **To Display the Number of Occurrences of Each Line**:
+   ```bash
+   $ sort a.txt | uniq -c
+     2 Bunny
+     2 Chinny
+     1 sunny
+     2 Sunny
+   ```
+   - This command prefixes each line with the count of how many times it appears in the file.
+
+3. **To Ignore Case While Comparing**:
+   ```bash
+   $ sort a.txt | uniq -i
+   Bunny
+   Chinny
+   sunny
+   ```
+   - This command treats lines as identical regardless of case.
+
+   ```bash
+   $ sort a.txt | uniq -ic
+     2 Bunny
+     2 Chinny
+     3 sunny
+   ```
+   - This combines case-insensitive comparison (`-i`) with the count option (`-c`), showing the number of occurrences of case-insensitive matches.
+
+4. **To Display Only Unique Lines (Lines Not Duplicated)**:
+   ```bash
+   $ sort a.txt | uniq -u
+   sunny
+   ```
+   - This command shows lines that appear only once in the file, excluding any duplicates.
+

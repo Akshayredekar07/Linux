@@ -56,6 +56,33 @@ $ mkdir -p level_1_dir/level_2_dir/level_3_dir/level_4_dir
 $ touch file1.txt level_1_dir/file2.txt level_1_dir/level_2_dir/file3.txt level_1_dir/level_2_dir/level_3_dir/file4.txt level_1_dir/level_2_dir/level_3_dir/level_4_dir/file5.txt
 ```
 
+Output
+```bash
+akshay@myubuntu:~/Desktop$ mkdir -p level_1_dir/level_2_dir/level_3_dir/level_4_dir
+akshay@myubuntu:~/Desktop$ tree
+.
+└── level_1_dir
+    └── level_2_dir
+        └── level_3_dir
+            └── level_4_dir
+
+5 directories, 0 files
+akshay@myubuntu:~/Desktop$ touch file1.txt level_1_dir/file2.txt level_1_dir/level_2_dir/file3.txt level_1_dir/level_2_dir/level_3_dir/file4.txt level_1_dir/level_2_dir/level_3_dir/level_4_dir/file5.txt
+akshay@myubuntu:~/Desktop$ tree
+.
+├── file1.txt
+└── level_1_dir
+    ├── file2.txt
+    └── level_2_dir
+        ├── file3.txt
+        └── level_3_dir
+            ├── file4.txt
+            └── level_4_dir
+                └── file5.txt
+
+5 directories, 5 files
+```
+
 #### Observing the Difference in Results
 
 Execute the following commands to see the effect of `maxdepth`:
@@ -76,6 +103,49 @@ Execute the following commands to see the effect of `maxdepth`:
    $ find . -maxdepth 100
    ```
 
+Output
+```bash
+akshay@myubuntu:~/Desktop$ find . -maxdepth 1
+.
+./level_1_dir
+./file1.txt
+akshay@myubuntu:~/Desktop$ find . -maxdepth 2
+.
+./level_1_dir
+./level_1_dir/file2.txt
+./level_1_dir/level_2_dir
+./file1.txt
+akshay@myubuntu:~/Desktop$ find . -maxdepth 3
+.
+./level_1_dir
+./level_1_dir/file2.txt
+./level_1_dir/level_2_dir
+./level_1_dir/level_2_dir/level_3_dir
+./level_1_dir/level_2_dir/file3.txt
+./file1.txt
+akshay@myubuntu:~/Desktop$ find . -maxdepth 4
+.
+./level_1_dir
+./level_1_dir/file2.txt
+./level_1_dir/level_2_dir
+./level_1_dir/level_2_dir/level_3_dir
+./level_1_dir/level_2_dir/level_3_dir/level_4_dir
+./level_1_dir/level_2_dir/level_3_dir/file4.txt
+./level_1_dir/level_2_dir/file3.txt
+./file1.txt
+akshay@myubuntu:~/Desktop$ find . -maxdepth 5
+.
+./level_1_dir
+./level_1_dir/file2.txt
+./level_1_dir/level_2_dir
+./level_1_dir/level_2_dir/level_3_dir
+./level_1_dir/level_2_dir/level_3_dir/level_4_dir
+./level_1_dir/level_2_dir/level_3_dir/level_4_dir/file5.txt
+./level_1_dir/level_2_dir/level_3_dir/file4.txt
+./level_1_dir/level_2_dir/file3.txt
+./file1.txt
+
+```
 ### Notes
 
 1. The `maxdepth` option requires a single dash (`-`), not a double dash (`--`):
@@ -245,79 +315,4 @@ You can perform operations on the results of the `find` command using the `-exec
 
 This will prompt you for confirmation before each copy operation.
 
-## Magic Assignment
-
-### Creating Directories and Files
-
-To create a directory structure and files, you can use the following commands:
-
-```bash
-$ mkdir magic
-$ mkdir magic/dir{1..100}
-$ touch magic/dir{1..100}/file{1..100}.txt
-```
-
-Alternatively, you can combine the commands into one:
-
-```bash
-$ mkdir magic; mkdir magic/dir{1..100}; touch magic/dir{1..100}/file{1..100}.txt
-```
-
-### Creating a Specific File
-
-To create a file named `sunny.txt` in a randomly chosen directory:
-
-```bash
-$ touch magic/dir$(shuf -i 1-100 -n 1)/sunny.txt
-```
-
-### Finding and Moving Files
-
-1. To find the `sunny.txt` file:
-
-   ```bash
-   $ find magic -type f -name 'sunny.txt'
-   ```
-
-2. To move `sunny.txt` to the Desktop:
-
-   ```bash
-   $ find magic -type f -name 'sunny.txt' -exec mv {} ~/Desktop \;
-   ```
-
-3. To remove all `.txt` files in the `magic` directory:
-
-   ```bash
-   $ find magic -type f -name '*.txt' -exec rm {} \;
-   ```
-
----
-
-## Quiz Questions
-
-### Q4: The Find Command Uses a Database to Search Files and Directories
-- A) True
-- B) False
-
-**Answer:** B
-
-### Q5: To find Files and Directories inside /dev Folder and Limit its Search to only 2 Levels of Depth?
-- A) `find -start /dev -depth 2`
-- B) `find /dev -depth 2`
-- C) `find /dev -maxdepth 2`
-
-**Answer:** C
-
-### Q6: To find only Directories inside /dev Folder and Limit its Search to only 2 Levels of Depth?
-- A) `find /dev -maxdepth 2 -type f`
-- B) `find /dev -maxdepth 2 -type d`
-- C) `find /dev -type d -maxdepth 2`
-
-**Answer:** B
-
-### Q7: To find only Files Starting from Root Directory (/) where File Name Ends with .txt?
-- A) `find / '*.txt'`
-- B) `find / -type d -name '*.txt'`
-- C) `find / -type f -name '*.txt'`
-
-**Answer:** C
+#

@@ -74,3 +74,4 @@ java is slowly going down
 ```
 
 **Note:** `fgrep` can only be used for exact strings and not for regular expressions.
+

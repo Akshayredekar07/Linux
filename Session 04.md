@@ -1,0 +1,117 @@
+## Hidden Files and Hidden Directories
+
+In Linux, hidden files and directories are those whose names begin with a dot (`.`). They are not displayed by default when listing files.
+
+- To list all files (including hidden files), use:
+  ```bash
+  ls -a
+  ```
+
+---
+
+### File System Navigation Commands
+
+Every directory in Linux implicitly contains two special directories:
+- `.` represents the current directory.
+- `..` represents the parent directory.
+
+**Navigation Commands:**
+
+- `$ cd .`  
+  Changes to the current directory (rarely used as it has no effect).
+
+- `$ cd ..`  
+  Changes to the parent directory.
+
+- `$ cd`  
+  Changes to the user's home directory (if no argument is passed).
+
+- `$ cd ~`  
+  The tilde `~` represents the user's home directory; this command changes to the home directory.
+
+- `$ cd -`  
+  Changes to the previous working directory.
+
+**Example Commands:**
+```bash
+# Check current directory
+pwd
+# List all files, including hidden ones
+ls -a
+# Navigate up three levels
+cd ../../..
+# Return to the home directory
+cd ~
+# Return to the previous directory
+cd -
+```
+
+**Sample Output:**
+```plaintext
+akshay@Ubuntu:~/Documents/DurgaSoft_Linux/tempdirectory$ pwd
+/home/akshay/Documents/DurgaSoft_Linux/tempdirectory
+akshay@Ubuntu:~/Documents/DurgaSoft_Linux/tempdirectory$ ls -a
+.  ..
+akshay@Ubuntu:~/Documents/DurgaSoft_Linux/tempdirectory$ cd ../../..
+akshay@Ubuntu:~$ pwd
+/home/akshay
+```
+
+---
+
+## Linux File System Hierarchy
+
+The Linux file system is organized as a tree-like structure, starting with the root directory (`/`). This root directory contains several important subdirectories, each serving a specific purpose:
+
+1. **`/bin` Directory**  
+   - Contains binary executables related to basic Linux commands.
+   - Example commands: `ls`, `touch`, `mkdir`
+
+   ```bash
+   which touch  # Output: /usr/bin/touch
+   which ls     # Output: /usr/bin/ls
+   which mkdir  # Output: /usr/bin/mkdir
+   ```
+
+2. **`/sbin` Directory**  
+   - Contains binary executables for system administration tasks, used primarily by the superuser (root).
+   - Example tasks: Disk partitioning, network management.
+
+   **Difference between `/bin` and `/sbin`:**
+   - `/bin` is for commands accessible to all users.
+   - `/sbin` is for commands used by the superuser.
+
+3. **`/etc` Directory**  
+   - Contains system configuration files that control the behavior of Linux.
+   - Important files:
+     - `/etc/passwd`: Contains user information.
+     - `/etc/group`: Contains group information.
+     - `/etc/hosts`: Contains IP and DNS mapping.
+
+---
+
+### Checking File Type
+
+In Ubuntu, directories are often color-coded in blue, while other colors are used for different types of files. However, color conventions vary by distribution, so they are not a reliable method for checking file types.
+
+To check the file type, use:
+```bash
+ls -l
+```
+
+**Output Example:**
+```plaintext
+-rw-rw-r-- 1 akshay akshay   342 Aug 29 07:52 directory-hierarchy-linux.mermaid
+-rw-rw-r-- 1 akshay akshay   463 Aug 29 07:15 flow-example.mermaid
+-rw-rw-r-- 1 akshay akshay    25 Aug 30 14:32 img.durga
+```
+
+The first character in the output indicates the file type:
+- `d`: Directory
+- `-`: Normal file
+- `l`: Link file
+- `c`: Character special file
+- `b`: Block special file
+- `s`: Socket file
+
+**Note:** `c`, `b`, and `s` represent system files, which are primarily used by the superuser.

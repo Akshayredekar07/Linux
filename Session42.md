@@ -134,3 +134,28 @@ $ chmod u=rw,g=rw,o=r demo.txt
 - Sets group permissions to `rw-`.  
 - Sets others' permissions to `r--`.  
 ```
+
+### Example 5
+```bash
+$ chmod a=- demo.txt
+```
+- Removes all permissions for all categories (user, group, others).
+
+**Result**:  
+- **User Permissions**: `---`  
+- **Group Permissions**: `---`  
+- **Others Permissions**: `---`  
+
+---
+
+### Example 6
+```bash
+$ chmod a=rwx demo.txt
+```
+- Grants all permissions (read, write, execute) to all categories (user, group, others).
+
+**Result**:  
+- **User Permissions**: `rwx`  
+- **Group Permissions**: `rwx`  
+- **Others Permissions**: `rwx`  
+```

@@ -1,0 +1,5 @@
+100:durga:1000:Hyderabad
+200:bunny:2000:Chennai
+300:chinny:3000:Hyderabad
+400:vinny:4000:Delhi
+500:pinny:5000:Hyderabad

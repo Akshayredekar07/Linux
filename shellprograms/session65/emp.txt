@@ -1,0 +1,3 @@
+1:Akshay:6500000:Pune
+2:Durga:700000:Hydrabad
+3:bunny:1000:Chennai

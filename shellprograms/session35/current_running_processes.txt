@@ -1,0 +1,270 @@
+UID          PID    PPID  C STIME TTY          TIME CMD
+root           1       0  0 21:17 ?        00:00:02 /sbin/init splash
+root           2       0  0 21:17 ?        00:00:00 [kthreadd]
+root           3       2  0 21:17 ?        00:00:00 [pool_workqueue_release]
+root           4       2  0 21:17 ?        00:00:00 [kworker/R-rcu_g]
+root           5       2  0 21:17 ?        00:00:00 [kworker/R-rcu_p]
+root           6       2  0 21:17 ?        00:00:00 [kworker/R-slub_]
+root           7       2  0 21:17 ?        00:00:00 [kworker/R-netns]
+root           9       2  0 21:17 ?        00:00:02 [kworker/0:1-cgroup_destroy]
+root          10       2  0 21:17 ?        00:00:00 [kworker/0:0H-events_highpri]
+root          11       2  0 21:17 ?        00:00:00 [kworker/u12:0-ext4-rsv-conversion]
+root          12       2  0 21:17 ?        00:00:00 [kworker/R-mm_pe]
+root          13       2  0 21:17 ?        00:00:00 [rcu_tasks_kthread]
+root          14       2  0 21:17 ?        00:00:00 [rcu_tasks_rude_kthread]
+root          15       2  0 21:17 ?        00:00:00 [rcu_tasks_trace_kthread]
+root          16       2  0 21:17 ?        00:00:00 [ksoftirqd/0]
+root          17       2  0 21:17 ?        00:00:05 [rcu_preempt]
+root          18       2  0 21:17 ?        00:00:00 [migration/0]
+root          19       2  0 21:17 ?        00:00:00 [idle_inject/0]
+root          20       2  0 21:17 ?        00:00:00 [cpuhp/0]
+root          21       2  0 21:17 ?        00:00:00 [cpuhp/1]
+root          22       2  0 21:17 ?        00:00:00 [idle_inject/1]
+root          23       2  0 21:17 ?        00:00:00 [migration/1]
+root          24       2  0 21:17 ?        00:00:00 [ksoftirqd/1]
+root          27       2  0 21:17 ?        00:00:00 [cpuhp/2]
+root          28       2  0 21:17 ?        00:00:00 [idle_inject/2]
+root          29       2  0 21:17 ?        00:00:00 [migration/2]
+root          30       2  0 21:17 ?        00:00:00 [ksoftirqd/2]
+root          31       2  0 21:17 ?        00:00:01 [kworker/2:0-events]
+root          33       2  0 21:17 ?        00:00:00 [cpuhp/3]
+root          34       2  0 21:17 ?        00:00:00 [idle_inject/3]
+root          35       2  0 21:17 ?        00:00:00 [migration/3]
+root          36       2  0 21:17 ?        00:00:00 [ksoftirqd/3]
+root          39       2  0 21:17 ?        00:00:00 [cpuhp/4]
+root          40       2  0 21:17 ?        00:00:00 [idle_inject/4]
+root          41       2  0 21:17 ?        00:00:00 [migration/4]
+root          42       2  0 21:17 ?        00:00:00 [ksoftirqd/4]
+root          43       2  0 21:17 ?        00:00:00 [kworker/4:0-mm_percpu_wq]
+root          44       2  0 21:17 ?        00:00:00 [kworker/4:0H-kblockd]
+root          45       2  0 21:17 ?        00:00:00 [cpuhp/5]
+root          46       2  0 21:17 ?        00:00:00 [idle_inject/5]
+root          47       2  0 21:17 ?        00:00:00 [migration/5]
+root          48       2  0 21:17 ?        00:00:00 [ksoftirqd/5]
+root          52       2  0 21:17 ?        00:00:00 [kworker/u14:0-events_unbound]
+root          57       2  0 21:17 ?        00:00:00 [kdevtmpfs]
+root          58       2  0 21:17 ?        00:00:00 [kworker/R-inet_]
+root          59       2  0 21:17 ?        00:00:00 [kworker/u13:1-events_unbound]
+root          60       2  0 21:17 ?        00:00:00 [kauditd]
+root          61       2  0 21:17 ?        00:00:00 [khungtaskd]
+root          62       2  0 21:17 ?        00:00:00 [oom_reaper]
+root          64       2  0 21:17 ?        00:00:00 [kworker/R-write]
+root          65       2  0 21:17 ?        00:00:00 [kcompactd0]
+root          66       2  0 21:17 ?        00:00:00 [ksmd]
+root          68       2  0 21:17 ?        00:00:00 [khugepaged]
+root          69       2  0 21:17 ?        00:00:00 [kworker/R-kinte]
+root          70       2  0 21:17 ?        00:00:00 [kworker/R-kbloc]
+root          71       2  0 21:17 ?        00:00:00 [kworker/R-blkcg]
+root          72       2  0 21:17 ?        00:00:00 [irq/9-acpi]
+root          74       2  0 21:17 ?        00:00:00 [kworker/R-tpm_d]
+root          75       2  0 21:17 ?        00:00:00 [kworker/R-ata_s]
+root          76       2  0 21:17 ?        00:00:00 [kworker/R-md]
+root          77       2  0 21:17 ?        00:00:00 [kworker/R-md_bi]
+root          78       2  0 21:17 ?        00:00:00 [kworker/R-edac-]
+root          79       2  0 21:17 ?        00:00:00 [kworker/R-devfr]
+root          80       2  0 21:17 ?        00:00:00 [watchdogd]
+root          82       2  0 21:17 ?        00:00:00 [kworker/3:1H-kblockd]
+root          83       2  0 21:17 ?        00:00:00 [kswapd0]
+root          84       2  0 21:17 ?        00:00:00 [ecryptfs-kthread]
+root          85       2  0 21:17 ?        00:00:00 [kworker/R-kthro]
+root          86       2  0 21:17 ?        00:00:00 [kworker/R-acpi_]
+root          87       2  0 21:17 ?        00:00:01 [kworker/u16:2-events_unbound]
+root          90       2  0 21:17 ?        00:00:00 [scsi_eh_0]
+root          91       2  0 21:17 ?        00:00:00 [kworker/R-scsi_]
+root          92       2  0 21:17 ?        00:00:00 [scsi_eh_1]
+root          93       2  0 21:17 ?        00:00:00 [kworker/R-scsi_]
+root          94       2  0 21:17 ?        00:00:00 [kworker/u16:3-flush-8:0]
+root          97       2  0 21:17 ?        00:00:00 [kworker/R-mld]
+root          98       2  0 21:17 ?        00:00:00 [kworker/R-ipv6_]
+root         106       2  0 21:17 ?        00:00:00 [kworker/R-kstrp]
+root         108       2  0 21:17 ?        00:00:00 [kworker/4:1H-kblockd]
+root         110       2  0 21:17 ?        00:00:00 [kworker/u19:0]
+root         111       2  0 21:17 ?        00:00:00 [kworker/u20:0-ttm]
+root         112       2  0 21:17 ?        00:00:00 [kworker/u21:0-ttm]
+root         113       2  0 21:17 ?        00:00:00 [kworker/u22:0]
+root         114       2  0 21:17 ?        00:00:00 [kworker/u23:0]
+root         115       2  0 21:17 ?        00:00:00 [kworker/u24:0]
+root         116       2  0 21:17 ?        00:00:00 [kworker/u25:0-ttm]
+root         120       2  0 21:17 ?        00:00:01 [kworker/u15:1-events_power_efficient]
+root         125       2  0 21:17 ?        00:00:00 [kworker/1:2-cgroup_destroy]
+root         132       2  0 21:17 ?        00:00:00 [kworker/R-charg]
+root         156       2  0 21:17 ?        00:00:00 [kworker/5:1H-kblockd]
+root         189       2  0 21:17 ?        00:00:00 [kworker/1:1H-kblockd]
+root         190       2  0 21:17 ?        00:00:00 [kworker/0:1H-kblockd]
+root         191       2  0 21:17 ?        00:00:00 [kworker/2:1H-kblockd]
+root         199       2  0 21:17 ?        00:00:00 [kworker/0:2-events]
+root         209       2  0 21:17 ?        00:00:00 [scsi_eh_2]
+root         210       2  0 21:17 ?        00:00:00 [kworker/R-scsi_]
+root         211       2  0 21:17 ?        00:00:00 [kworker/u13:2-events_power_efficient]
+root         212       2  0 21:17 ?        00:00:00 [kworker/u18:2-events_unbound]
+root         213       2  0 21:17 ?        00:00:00 [kworker/5:2-mm_percpu_wq]
+root         259       2  0 21:17 ?        00:00:00 [jbd2/sda2-8]
+root         260       2  0 21:17 ?        00:00:00 [kworker/R-ext4-]
+root         308       1  0 21:17 ?        00:00:01 /usr/lib/systemd/systemd-journald
+root         326       2  0 21:17 ?        00:00:00 [kworker/u14:2-events_unbound]
+root         363       2  0 21:17 ?        00:00:00 [kworker/4:2-mm_percpu_wq]
+root         390       1  0 21:17 ?        00:00:00 /usr/lib/systemd/systemd-udevd
+root         466       2  0 21:17 ?        00:00:00 [psimon]
+systemd+     530       1  0 21:17 ?        00:00:00 /usr/lib/systemd/systemd-resolved
+root         585       2  0 21:17 ?        00:00:00 [kworker/u18:3-flush-8:0]
+root         586       2  0 21:17 ?        00:00:00 [kworker/3:2H-kblockd]
+root         640       2  0 21:17 ?        00:00:00 [kworker/R-iprt-]
+root         668       2  0 21:17 ?        00:00:00 [kworker/R-crypt]
+root         676       2  0 21:17 ?        00:00:00 [irq/18-vmwgfx]
+root         678       2  0 21:17 ?        00:00:00 [kworker/R-ttm]
+avahi        712       1  0 21:17 ?        00:00:00 avahi-daemon: running [myubuntu.local]
+message+     715       1  0 21:17 ?        00:00:02 @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+gnome-r+     724       1  0 21:17 ?        00:00:00 /usr/libexec/gnome-remote-desktop-daemon --system
+polkitd      748       1  0 21:17 ?        00:00:01 /usr/lib/polkit-1/polkitd --no-debug
+root         750       1  0 21:17 ?        00:00:00 /usr/libexec/power-profiles-daemon
+root         759       1  0 21:17 ?        00:00:01 /usr/lib/snapd/snapd
+root         766       1  0 21:17 ?        00:00:00 /usr/libexec/accounts-daemon
+root         779       1  0 21:17 ?        00:00:00 /usr/sbin/cron -f -P
+root         788       1  0 21:17 ?        00:00:00 /usr/libexec/switcheroo-control
+root         809       1  0 21:17 ?        00:00:00 /usr/lib/systemd/systemd-logind
+root         822       1  0 21:17 ?        00:00:00 /usr/libexec/udisks2/udisksd
+syslog       842       1  0 21:17 ?        00:00:00 /usr/sbin/rsyslogd -n -iNONE
+avahi        875     712  0 21:17 ?        00:00:00 avahi-daemon: chroot helper
+root         883       1  0 21:17 ?        00:00:00 /usr/sbin/NetworkManager --no-daemon
+root         898       1  0 21:17 ?        00:00:00 /usr/sbin/wpa_supplicant -u -s -O DIR=/run/wpa_supplicant GROUP=netdev
+root        1005       1  0 21:17 ?        00:00:00 /usr/sbin/ModemManager
+root        1077       2  0 21:17 ?        00:00:00 [kworker/u12:2]
+root        1325       1  0 21:17 ?        00:00:05 /usr/bin/VBoxDRMClient
+root        1328       1  0 21:17 ?        00:00:01 /usr/sbin/VBoxService --pidfile /var/run/vboxadd-service.sh
+root        1417       2  0 21:17 ?        00:00:00 [kworker/u20:1]
+root        1421       1  0 21:17 ?        00:00:00 /usr/sbin/cupsd -l
+root        1424       1  0 21:17 ?        00:00:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+lp          1436    1421  0 21:17 ?        00:00:00 /usr/lib/cups/notifier/dbus dbus://
+root        1438       1  0 21:17 ?        00:00:00 /usr/sbin/gdm3
+cups-br+    1447       1  0 21:17 ?        00:00:00 /usr/sbin/cups-browsed
+kernoops    1454       1  0 21:17 ?        00:00:00 /usr/sbin/kerneloops --test
+kernoops    1457       1  0 21:17 ?        00:00:00 /usr/sbin/kerneloops
+root        1463       2  0 21:17 ?        00:00:00 [psimon]
+rtkit       1504       1  0 21:17 ?        00:00:00 /usr/libexec/rtkit-daemon
+colord      1609       1  0 21:17 ?        00:00:00 /usr/libexec/colord
+root        1687       1  0 21:17 ?        00:00:01 /usr/libexec/upowerd
+root        1887       2  0 21:17 ?        00:00:00 [kworker/u25:1]
+root        1946       2  0 21:17 ?        00:00:01 [kworker/u15:3-events_unbound]
+root        2034    1438  0 21:18 ?        00:00:00 gdm-session-worker [pam/gdm-password]
+akshay      2044       1  0 21:18 ?        00:00:01 /usr/lib/systemd/systemd --user
+akshay      2048    2044  0 21:18 ?        00:00:00 (sd-pam)
+akshay      2063    2044  0 21:18 ?        00:00:04 /usr/bin/pipewire
+akshay      2064    2044  0 21:18 ?        00:00:00 /usr/bin/pipewire -c filter-chain.conf
+akshay      2067    2044  0 21:18 ?        00:00:00 /usr/bin/wireplumber
+akshay      2068    2044  0 21:18 ?        00:00:00 /usr/bin/pipewire-pulse
+akshay      2069    2044  0 21:18 ?        00:00:00 /usr/bin/gnome-keyring-daemon --foreground --components=pkcs11,secrets --control-directory=/run/user/1000/keyring
+akshay      2075    2044  0 21:18 ?        00:00:03 /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+akshay      2103    2044  0 21:18 ?        00:00:00 /usr/libexec/xdg-document-portal
+akshay      2117    2044  0 21:18 ?        00:00:00 /usr/libexec/xdg-permission-store
+root        2126    2103  0 21:18 ?        00:00:00 fusermount3 -o rw,nosuid,nodev,fsname=portal,auto_unmount,subtype=portal -- /run/user/1000/doc
+akshay      2146    2034  0 21:18 tty2     00:00:00 /usr/libexec/gdm-wayland-session env GNOME_SHELL_SESSION_MODE=ubuntu /usr/bin/gnome-session --session=ubuntu
+akshay      2151    2146  0 21:18 tty2     00:00:00 /usr/libexec/gnome-session-binary --session=ubuntu
+akshay      2216    2044  0 21:18 ?        00:00:00 /usr/libexec/gcr-ssh-agent --base-dir /run/user/1000/gcr
+akshay      2218    2044  0 21:18 ?        00:00:00 /usr/libexec/gnome-session-ctl --monitor
+akshay      2240    2044  0 21:18 ?        00:00:00 /usr/libexec/gvfsd
+akshay      2252    2044  0 21:18 ?        00:00:00 /usr/libexec/gvfsd-fuse /run/user/1000/gvfs -f
+akshay      2260    2044  0 21:18 ?        00:00:00 /usr/libexec/gnome-session-binary --systemd-service --session=ubuntu
+akshay      2298    2260  0 21:18 ?        00:00:00 /usr/libexec/at-spi-bus-launcher --launch-immediately
+akshay      2300    2044  7 21:18 ?        00:05:15 /usr/bin/gnome-shell
+root        2306       2  0 21:18 ?        00:00:00 [kworker/3:4-mm_percpu_wq]
+akshay      2317    2298  0 21:18 ?        00:00:00 /usr/bin/dbus-daemon --config-file=/usr/share/defaults/at-spi2/accessibility.conf --nofork --print-address 11 --address=unix:path=/run/user/1000/at-spi/bus
+akshay      2377    2044  0 21:18 ?        00:00:00 /usr/libexec/at-spi2-registryd --use-gnome-session
+akshay      2392    2044  0 21:18 ?        00:00:00 /usr/libexec/gnome-shell-calendar-server
+akshay      2410    2044  0 21:18 ?        00:00:01 /usr/libexec/evolution-source-registry
+akshay      2419    2044  0 21:18 ?        00:00:00 /usr/bin/gjs -m /usr/share/gnome-shell/org.gnome.Shell.Notifications
+akshay      2425    2044  0 21:18 ?        00:00:07 /usr/bin/ibus-daemon --panel disable
+akshay      2431    2044  0 21:18 ?        00:00:00 /usr/libexec/gsd-a11y-settings
+akshay      2435    2044  0 21:18 ?        00:00:00 /usr/libexec/gsd-color
+akshay      2436    2044  0 21:18 ?        00:00:00 /usr/libexec/gsd-datetime
+akshay      2446    2044  0 21:18 ?        00:00:00 /usr/libexec/gsd-housekeeping
+akshay      2450    2044  0 21:18 ?        00:00:00 /usr/libexec/gsd-keyboard
+akshay      2454    2044  0 21:18 ?        00:00:00 /usr/libexec/gsd-media-keys
+akshay      2458    2044  0 21:18 ?        00:00:00 /usr/libexec/gsd-power
+akshay      2460    2044  0 21:18 ?        00:00:00 /usr/libexec/gsd-print-notifications
+akshay      2462    2044  0 21:18 ?        00:00:00 /usr/libexec/gsd-rfkill
+akshay      2467    2044  0 21:18 ?        00:00:00 /usr/libexec/gsd-screensaver-proxy
+akshay      2490    2260  0 21:18 ?        00:00:00 /usr/libexec/gsd-disk-utility-notify
+akshay      2497    2044  0 21:18 ?        00:00:00 /usr/libexec/gsd-sharing
+akshay      2502    2044  0 21:18 ?        00:00:00 /usr/libexec/gsd-smartcard
+akshay      2505    2260  0 21:18 ?        00:00:00 /usr/libexec/evolution-data-server/evolution-alarm-notify
+akshay      2506    2044  0 21:18 ?        00:00:00 /usr/libexec/gsd-sound
+akshay      2509    2044  0 21:18 ?        00:00:00 /usr/libexec/gsd-wacom
+akshay      2569    2044  0 21:18 ?        00:00:00 /usr/libexec/gvfs-udisks2-volume-monitor
+akshay      2605    2425  0 21:18 ?        00:00:00 /usr/libexec/ibus-dconf
+akshay      2606    2425  0 21:18 ?        00:00:02 /usr/libexec/ibus-extension-gtk3
+akshay      2618    2044  0 21:18 ?        00:00:00 /usr/libexec/ibus-portal
+akshay      2636    2044  0 21:18 ?        00:00:01 /usr/libexec/goa-daemon
+akshay      2642    2044  0 21:18 ?        00:00:00 /usr/libexec/gsd-printer
+akshay      2659    2044  0 21:18 ?        00:00:00 /usr/libexec/gvfs-goa-volume-monitor
+akshay      2671    2044  0 21:18 ?        00:00:00 /usr/libexec/goa-identity-service
+akshay      2680    2044  0 21:18 ?        00:00:00 /usr/libexec/gvfs-afc-volume-monitor
+akshay      2681    2044  0 21:18 ?        00:00:00 /usr/libexec/gvfsd-metadata
+akshay      2690    2044  0 21:18 ?        00:00:00 /usr/libexec/gvfs-mtp-volume-monitor
+akshay      2697    2044  0 21:18 ?        00:00:00 /usr/libexec/gvfs-gphoto2-volume-monitor
+akshay      2709    2044  0 21:18 ?        00:00:01 /usr/libexec/evolution-calendar-factory
+akshay      2714    2300  0 21:18 ?        00:00:33 /usr/bin/Xwayland :0 -rootless -noreset -accessx -core -auth /run/user/1000/.mutter-Xwaylandauth.K16SX2 -listenfd 4 -listenfd 5 -displayfd 6 -initfd 7 -byteswappedclients
+akshay      2732    2044  0 21:18 ?        00:00:00 /usr/libexec/evolution-addressbook-factory
+akshay      2755    2425  0 21:18 ?        00:00:02 /usr/libexec/ibus-engine-simple
+akshay      2798    2044  0 21:18 ?        00:00:00 /usr/libexec/dconf-service
+akshay      2805    2240  0 21:18 ?        00:00:00 /usr/libexec/gvfsd-trash --spawner :1.20 /org/gtk/gvfs/exec_spaw/0
+akshay      2819    2044  0 21:18 ?        00:00:00 /snap/snapd-desktop-integration/253/usr/bin/snapd-desktop-integration
+akshay      2876    2044  0 21:18 ?        00:00:00 /usr/libexec/tracker-miner-fs-3
+akshay      2889    2044  0 21:18 ?        00:00:00 /usr/libexec/gsd-xsettings
+akshay      2890    2819  0 21:18 ?        00:00:00 /snap/snapd-desktop-integration/253/usr/bin/snapd-desktop-integration
+root        2926       2  0 21:18 ?        00:00:00 [kworker/u21:1]
+akshay      2935    2044  0 21:18 ?        00:00:00 /usr/bin/gjs -m /usr/share/gnome-shell/org.gnome.ScreenSaver
+akshay      3008    2044  0 21:18 ?        00:00:00 /usr/libexec/xdg-desktop-portal
+akshay      3018    2044  0 21:18 ?        00:00:00 /usr/libexec/xdg-desktop-portal-gnome
+akshay      3054    2044  0 21:18 ?        00:00:00 /usr/libexec/xdg-desktop-portal-gtk
+akshay      3071    2044  0 21:18 ?        00:00:00 /usr/libexec/ibus-x11
+akshay      3080    2300  0 21:18 ?        00:00:04 /usr/libexec/mutter-x11-frames
+akshay      3083    2044  0 21:18 ?        00:00:00 /usr/bin/VBoxClient --clipboard
+akshay      3084    3083  0 21:18 ?        00:00:00 /usr/bin/VBoxClient --clipboard
+akshay      3109    2044  0 21:18 ?        00:00:00 /usr/bin/VBoxClient --vmsvga-session
+akshay      3110    3109  0 21:18 ?        00:00:01 /usr/bin/VBoxClient --vmsvga-session
+akshay      3215    2300  1 21:18 ?        00:00:40 /usr/share/code/code
+akshay      3221    3215  0 21:18 ?        00:00:00 /usr/share/code/code --type=zygote --no-zygote-sandbox
+akshay      3222    3215  0 21:18 ?        00:00:00 /usr/share/code/code --type=zygote
+akshay      3224    3222  0 21:18 ?        00:00:00 /usr/share/code/code --type=zygote
+akshay      3243    2044  0 21:18 ?        00:00:00 /usr/share/code/chrome_crashpad_handler --monitor-self-annotation=ptype=crashpad-handler --no-rate-limit --database=/home/akshay/.config/Code/Crashpad --url=appcenter://code?aid=fba07a4d-84bd-4fc8-a125-9640fc8ce171&uid=70dab472-7fe3-4a34-9bb2-65d827a82ced&iid=70dab472-7fe3-4a34-9bb2-65d827a82ced&sid=70dab472-7fe3-4a34-9bb2-65d827a82ced --annotation=_companyName=Microsoft --annotation=_productName=VSCode --annotation=_version=1.95.2 --annotation=lsb-release=Ubuntu 24.04.1 LTS --annotation=plat=Linux --annotation=prod=Electron --annotation=ver=32.2.1 --initial-client-fd=46 --shared-client-connection
+akshay      3253    2044  0 21:18 ?        00:00:07 /usr/bin/nautilus --gapplication-service
+akshay      3261    3221  1 21:18 ?        00:00:53 /usr/share/code/code --type=gpu-process --crashpad-handler-pid=3243 --enable-crash-reporter=835dc7e5-8126-46b4-98f0-8ec536605cd2,no_channel --user-data-dir=/home/akshay/.config/Code --gpu-preferences=UAAAAAAAAAAgAAAEAAAAAAAAAAAAAAAAAABgAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAABAAAAAAAAAAEAAAAAAAAAAIAAAAAAAAAAgAAAAAAAAA --shared-files --field-trial-handle=3,i,8044669552789803429,13886868550150837939,262144 --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess --variations-seed-version
+akshay      3278    3215  0 21:18 ?        00:00:04 /usr/share/code/code --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US --service-sandbox-type=none --crashpad-handler-pid=3243 --enable-crash-reporter=835dc7e5-8126-46b4-98f0-8ec536605cd2,no_channel --user-data-dir=/home/akshay/.config/Code --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,8044669552789803429,13886868550150837939,262144 --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess --variations-seed-version
+akshay      3325    3224  3 21:18 ?        00:02:14 /usr/share/code/code --type=renderer --crashpad-handler-pid=3243 --enable-crash-reporter=835dc7e5-8126-46b4-98f0-8ec536605cd2,no_channel --user-data-dir=/home/akshay/.config/Code --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --app-path=/usr/share/code/resources/app --enable-sandbox --enable-blink-features=HighlightAPI --disable-blink-features=FontMatchingCTMigration, --lang=en-US --num-raster-threads=3 --enable-main-frame-before-activation --renderer-client-id=4 --time-ticks-at-unix-epoch=-1732290437601361 --launch-time-ticks=82035879 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,8044669552789803429,13886868550150837939,262144 --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess --variations-seed-version --vscode-window-config=vscode:b85627aa-ec1f-4ca9-b302-c675415f5e7a
+akshay      3373    2240  0 21:18 ?        00:00:00 /usr/libexec/gvfsd-recent --spawner :1.20 /org/gtk/gvfs/exec_spaw/1
+root        3393       2  0 21:18 ?        00:00:00 [kworker/1:2H-kblockd]
+akshay      3394    3215  0 21:18 ?        00:00:19 /usr/share/code/code --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-US --service-sandbox-type=none --dns-result-order=ipv4first --inspect-port=0 --crashpad-handler-pid=3243 --enable-crash-reporter=835dc7e5-8126-46b4-98f0-8ec536605cd2,no_channel --user-data-dir=/home/akshay/.config/Code --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,8044669552789803429,13886868550150837939,262144 --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess --variations-seed-version
+akshay      3410    3215  0 21:18 ?        00:00:39 /usr/share/code/code --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-US --service-sandbox-type=none --crashpad-handler-pid=3243 --enable-crash-reporter=835dc7e5-8126-46b4-98f0-8ec536605cd2,no_channel --user-data-dir=/home/akshay/.config/Code --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,8044669552789803429,13886868550150837939,262144 --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess --variations-seed-version
+akshay      3411    3215  0 21:18 ?        00:00:04 /usr/share/code/code --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-US --service-sandbox-type=none --crashpad-handler-pid=3243 --enable-crash-reporter=835dc7e5-8126-46b4-98f0-8ec536605cd2,no_channel --user-data-dir=/home/akshay/.config/Code --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,8044669552789803429,13886868550150837939,262144 --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess --variations-seed-version
+root        3450       2  0 21:18 ?        00:00:00 [kworker/5:2H-kblockd]
+akshay      3470    3394  0 21:18 ?        00:00:01 /usr/share/code/code /usr/share/code/resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=3394
+akshay      3497    2044  0 21:18 ?        00:00:10 /usr/bin/evince /home/akshay/Documents/Linux/Linux notes/DurgaSir Linux.pdf
+akshay      3507    2044  0 21:18 ?        00:00:00 /usr/libexec/evinced
+akshay      3549    2260  0 21:19 ?        00:00:00 /usr/bin/update-notifier
+akshay      3653    2044  0 21:21 ?        00:00:13 /usr/libexec/gnome-terminal-server
+akshay      3661    3653  0 21:21 pts/0    00:00:00 bash
+root        3816       2  0 21:24 ?        00:00:01 [kworker/u14:1-events_power_efficient]
+root        3839       2  0 21:24 ?        00:00:00 [kworker/u16:0-events_unbound]
+root        3942       2  0 21:30 ?        00:00:00 [kworker/2:1-cgroup_destroy]
+root        3944       2  0 21:30 ?        00:00:00 [kworker/u17:2-events_power_efficient]
+root        3950       2  0 21:32 ?        00:00:00 [kworker/5:1-cgroup_destroy]
+root        3951       2  0 21:33 ?        00:00:00 [kworker/u13:3-events_unbound]
+root        4002       2  0 21:36 ?        00:00:00 [kworker/2:0H-kblockd]
+akshay      4051    3224  0 21:42 ?        00:00:10 /usr/share/code/code --type=renderer --crashpad-handler-pid=3243 --enable-crash-reporter=835dc7e5-8126-46b4-98f0-8ec536605cd2,no_channel --user-data-dir=/home/akshay/.config/Code --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --app-path=/usr/share/code/resources/app --enable-sandbox --enable-blink-features=HighlightAPI --disable-gpu-compositing --disable-blink-features=FontMatchingCTMigration, --lang=en-US --num-raster-threads=3 --enable-main-frame-before-activation --renderer-client-id=14 --time-ticks-at-unix-epoch=-1732290437601361 --launch-time-ticks=1515810744 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,8044669552789803429,13886868550150837939,262144 --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess --variations-seed-version --vscode-window-config=vscode:b85627aa-ec1f-4ca9-b302-c675415f5e7a
+root        4068       2  0 21:42 ?        00:00:00 [kworker/u15:2-events_power_efficient]
+root        4131       2  0 21:47 ?        00:00:00 [kworker/u18:1-flush-8:0]
+root        4191       2  0 21:50 ?        00:00:00 [kworker/3:0-cgroup_destroy]
+root        4298       2  0 21:55 ?        00:00:00 [kworker/u17:1-writeback]
+root        4303       2  0 21:56 ?        00:00:00 [kworker/1:1-mm_percpu_wq]
+root        4336       2  0 22:20 ?        00:00:00 [kworker/1:0-cgroup_destroy]
+root        4346       1  0 22:20 ?        00:00:00 /usr/libexec/fwupd/fwupd
+root        4370       2  0 22:20 ?        00:00:00 [kworker/5:0]
+root        4396       2  0 22:20 ?        00:00:00 [kworker/0:0]
+root        4397       2  0 22:20 ?        00:00:00 [kworker/u17:0-events_unbound]
+systemd+    4409       1  0 22:20 ?        00:00:00 /usr/lib/systemd/systemd-oomd
+root        4419       2  0 22:20 ?        00:00:00 [kworker/u16:1]
+root        4420       2  0 22:20 ?        00:00:00 [kworker/3:0H-kblockd]
+root        4423       2  0 22:21 ?        00:00:00 [kworker/u15:0-events_unbound]
+akshay      4448    2300  0 22:21 ?        00:00:00 gjs /usr/share/gnome-shell/extensions/ding@rastersoft.com/app/ding.js -E -P /usr/share/gnome-shell/extensions/ding@rastersoft.com/app
+root        4540       2  0 22:21 ?        00:00:00 [kworker/2:2]
+akshay      4552    3661  0 22:24 pts/0    00:00:00 ps -ef

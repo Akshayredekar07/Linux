@@ -1,0 +1,2 @@
+300:chinny:3000:Hyderabad
+500:pinny:5000:Hyderabad

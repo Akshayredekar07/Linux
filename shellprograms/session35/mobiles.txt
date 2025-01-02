@@ -1,0 +1,6 @@
+company/sales/clients.txt:9123456789
+company/sales/clients.txt:8112345678
+company/sales/leads.txt:9871234567
+company/sales/leads.txt:8769123456
+company/hr/employee.txt:9876543210
+company/hr/employee.txt:8765432109

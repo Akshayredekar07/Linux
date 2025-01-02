@@ -1,0 +1,10 @@
+2024-11-24 10:23:45 INFO Server started successfully.
+2024-11-24 10:25:10 WARN Memory usage exceeded 80%.
+2024-11-24 10:27:30 ERROR Failed to connect to database.
+2024-11-24 10:30:00 INFO Scheduled backup completed.
+2024-11-24 10:35:20 ERROR Disk space critically low.
+2024-11-24 10:40:50 INFO User logged in: admin.
+2024-11-24 10:45:15 WARN High CPU usage detected.
+2024-11-24 10:50:25 INFO [System Shutdown] initiated by admin.
+2024-11-24 10:55:05 ERROR Application crash detected.
+

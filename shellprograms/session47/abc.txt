@@ -1,0 +1,6 @@
+This is whole line replaced with S
+
+this is last added
+
+python test.py is mostly used for testing python working or not
+

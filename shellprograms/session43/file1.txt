@@ -1,0 +1,11 @@
+This is sample file created for file permission
+read
+write 
+execute
++
+-
+=
+user
+group
+others
+all

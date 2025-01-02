@@ -1,0 +1,20 @@
+Learning Linux is very easy and essential for anyone working in technology today.
+The knowledge of Linux is required everywhere, from small startups to large organizations.
+Your father learned Linux in his time; now you are learning it to advance in your career.
+In the future, your kids will also need to learn Linux to stay competitive in their fields.
+(java|linux) This line can only be understood by egrep but not grep, which uses basic regex.
+Linuxclasses are offered by many online platforms to help people master this operating system.
+Linuxmaterial includes books, tutorials, and documentation for beginners and advanced users.
+Linuxvideos are available on YouTube and other sites for easy and interactive learning.
+Linux is an open-source operating system that powers servers, desktops, and mobile devices.
+Everyone should learn Linux to gain an edge in today's technology-driven professional world.
+django is python based framework to develop web applications
+dogs situation is very dangeours these lock down days
+My car number is MH 14 BH 7777
+1
+12
+123
+1234
+12345
+123456
+

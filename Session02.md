@@ -1,9 +1,7 @@
 
 # Components of UNIX
 
-## user-os-hardware.mermaid
-
-### 2 Important Components:
+### Important Components:
 
 - **a. Shell**
 - **b. Kernel**

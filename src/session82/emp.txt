@@ -1,0 +1,6 @@
+eno ename  esal eaddr
+100 Durga  1000 Mumbai
+200 Bunny  2000 Hyderabad
+300 Chinny 3000 Hyderabad
+400 Vinny  4000 Chennai
+500 Pinny  5000 Mumbai

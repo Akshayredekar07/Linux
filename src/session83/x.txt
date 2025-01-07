@@ -1,0 +1,3 @@
+BEGIN {FS=","; print "BEGIN"}
+{print $0}
+END {print "END"}

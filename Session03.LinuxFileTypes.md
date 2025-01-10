@@ -58,6 +58,10 @@ In Linux, everything is treated as a file. All files are divided into three type
 ### {C} Device Files
 
 - In Linux, every device is represented as a file, allowing communication with the device.
+* Device files in Linux represent hardware devices, such as hard drives, keyboards, and network interfaces. 
+* They are located in the `/dev/` directory. 
+* Two main types: character devices (for sequential data) and block devices (for random access). 
+* Accessing device files through system calls allows interaction with hardware.
   - Example:
     ```bash
     tty  # This file represents the terminal
@@ -116,4 +120,4 @@ In Linux, everything is treated as a file. All files are divided into three type
   -rwxrw-r-- 1 akshay akshay      50 Aug 28 19:11  test.sh
   -rw-rw-r-- 1 akshay akshay     672 Aug 28 18:26  unix-flow-digram.mermaid
   -rw-rw-r-- 1 akshay akshay     710 Aug 28 19:43  user-os-hardware.mermaid
-```
+  ```

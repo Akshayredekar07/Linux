@@ -1,5 +1,5 @@
 
-# How to Remove Directories
+# Linux commands for How to Remove Directories
 
 We can remove directories by using the `rmdir` command.
 

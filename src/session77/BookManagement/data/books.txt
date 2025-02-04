@@ -1,0 +1,13 @@
+Python
+Postgresql
+Java
+Linux
+DSA
+Computer vision
+AWs
+Terraform
+GCP
+Spring Boot
+Deep Learning
+NLP
+Docker

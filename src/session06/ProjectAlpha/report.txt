@@ -1,0 +1,21 @@
+/home/akshay/ProjectAlpha:
+total 12
+drwxrwxr-x 2 akshay akshay 4096 Feb  4 22:48 assets
+drwxrwxr-x 2 akshay akshay 4096 Feb  4 22:48 docs
+-rw-rw-r-- 1 akshay akshay    0 Feb  5 03:03 report.txt
+drwxrwxr-x 2 akshay akshay 4096 Feb  4 22:48 scripts
+
+/home/akshay/ProjectAlpha/assets:
+total 0
+-rw-rw-r-- 1 akshay akshay 0 Feb  4 22:48 image1.png
+-rw-rw-r-- 1 akshay akshay 0 Feb  4 22:48 image2.png
+
+/home/akshay/ProjectAlpha/docs:
+total 0
+-rw-rw-r-- 1 akshay akshay 0 Feb  4 22:48 project_overview.txt
+-rw-rw-r-- 1 akshay akshay 0 Feb  4 22:48 release_notes.txt
+
+/home/akshay/ProjectAlpha/scripts:
+total 0
+-rw-rw-r-- 1 akshay akshay 0 Feb  4 22:48 script1.sh
+-rw-rw-r-- 1 akshay akshay 0 Feb  4 22:48 script2.sh

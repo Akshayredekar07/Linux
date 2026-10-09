@@ -17,7 +17,7 @@
 
 This repository is a complete Linux reference, built phase by phase around real terminal practice. It begins with the filesystem and core commands, then covers streams, regular expressions, and text processing. After that it moves into Bash scripting and automation, and it ends with the skills used on production systems: process and service management, networking, storage, logging, and security.
 
-Every phase stands on its own, with short written theory, runnable practice files, and exercises. The material matches what DevOps and cloud engineering work asks for, because Linux skill is the base that containers, CI/CD, and infrastructure as code are built on.
+Every phase stands on its own, with written documentation and a lab folder that holds runnable practice files and exercises. The material matches what DevOps and cloud engineering work asks for, because Linux skill is the base that containers, CI/CD, and infrastructure as code are built on.
 
 
 ---
@@ -56,16 +56,6 @@ cd linux
 ```bash
 sudo apt update
 sudo apt install -y git gawk shellcheck
-```
-
-**Quick start for any phase:**
-
-```bash
-cd 11__shell-basics
-cat README.md                    # phase overview
-bash lab/first.sh                # run a lab script
-chmod +x lab/first.sh            # or make it executable
-./lab/first.sh                   # and run it directly
 ```
 
 ---
@@ -133,9 +123,11 @@ awesome-linux/
 ├── scaffold.sh
 ├── 01__fundamentals/ ... 24__resources/
 │   ├── README.md          # phase overview
-│   ├── theory/            # written lessons
-│   ├── lab/               # runnable scripts and sample data
-│   └── exercises/         # practice questions with answers
+│   ├── documentation/     # written lessons
+│   └── lab/               # runnable scripts, sample data, and exercises
+│       ├── scripts/       # practice scripts
+│       ├── data/          # sample files used by the scripts
+│       └── exercises.md   # practice questions with answers
 └── assets/
     ├── images/
     └── diagrams/
@@ -149,7 +141,7 @@ awesome-linux/
 Fixes and new examples are welcome.
 
 1. Fork the repo and create a branch.
-2. Keep each phase in the same layout: `theory/`, `lab/`, `exercises/`.
+2. Keep each phase in the same layout: `documentation/` and `lab/`.
 3. Run `shellcheck` on every script before you open a pull request.
 4. Open a pull request with a short note on what you changed.
 

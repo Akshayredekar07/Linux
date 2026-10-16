@@ -116,47 +116,57 @@ The shell, not `ls`, expands `*`. Wildcards are explained fully in a later phase
 
 `ls -R` lists a directory and everything below it. Each directory gets its own heading.
 
-**Warning:** Do not run `ls -R /`. It prints the whole system and floods your screen. If this happens, press `Ctrl+C` to stop it. Use `-R` only on small folders.
+> **Warning:** Do not run `ls -R /`. It prints the whole system and floods your screen. If this happens, press `Ctrl+C` to stop it. Use `-R` only on small folders.
 
 ---
 
 ## **Try It**
 
-Run these in your own terminal (WSL2 Ubuntu) before you commit. The lab uses `mkdir`, `touch`, and `echo >` to make files. They are explained in [Phase 3](../../03__file-operations/) and [Phase 6](../../06__streams-pipes/). Dates are shown as `...`, and numbers may differ on your system.
+> Run these in your own terminal (WSL2 Ubuntu) before you commit. The lab uses `mkdir`, `touch`, and `echo >` to make files. They are explained in [Phase 3](../../03__file-operations/) and [Phase 6](../../06__streams-pipes/). Dates are shown as `...`, and numbers may differ on your system.
 
 **1. Build a practice folder**
 
 ```bash
-akshay@ubuntu:~$ mkdir -p ~/ls-lab/docs ~/ls-lab/scripts
-akshay@ubuntu:~$ cd ~/ls-lab
-akshay@ubuntu:~/ls-lab$ echo "hello linux" notes.txt
-akshay@ubuntu:~/ls-lab$ echo "line one" readme.txt
-akshay@ubuntu:~/ls-lab$ touch .secret docs/a.txt docs/b.txt scripts/hello.sh
+mkdir -p ~/ls-lab/docs ~/ls-lab/scripts
+cd ~/ls-lab
+echo "hello linux" > notes.txt
+echo "line one" > readme.txt
+touch .secret docs/a.txt docs/b.txt scripts/hello.sh
 ```
 
 **2. Plain `ls` and hidden files**
 
 ```bash
-akshay@ubuntu:~/ls-lab$ ls
+ls
+ls -a
+ls -A
+```
+
+Example output:
+
+```text
 docs  notes.txt  readme.txt  scripts
-akshay@ubuntu:~/ls-lab$ ls -a
 .  ..  .secret  docs  notes.txt  readme.txt  scripts
-akshay@ubuntu:~/ls-lab$ ls -A
 .secret  docs  notes.txt  readme.txt  scripts
 ```
 
-The order of `.secret` can be different on your system.
+The position of `.secret` can be different on your system.
 
 **3. Long format**
 
 ```bash
-akshay@ubuntu:~/ls-lab$ ls -l
+ls -l
+ls -lh
+```
+
+Example output:
+
+```text
 total 16
 drwxr-xr-x 2 akshay akshay 4096 ... docs
 -rw-r--r-- 1 akshay akshay   12 ... notes.txt
 -rw-r--r-- 1 akshay akshay    9 ... readme.txt
 drwxr-xr-x 2 akshay akshay 4096 ... scripts
-akshay@ubuntu:~/ls-lab$ ls -lh
 total 16K
 drwxr-xr-x 2 akshay akshay 4.0K ... docs
 -rw-r--r-- 1 akshay akshay   12 ... notes.txt
@@ -169,27 +179,37 @@ drwxr-xr-x 2 akshay akshay 4.0K ... scripts
 **4. Marks, one per line, and the directory itself**
 
 ```bash
-akshay@ubuntu:~/ls-lab$ ls -F
+ls -F
+ls -1
+ls -l docs
+ls -ld docs
+ls -d */
+```
+
+Example output:
+
+```text
 docs/  notes.txt  readme.txt  scripts/
-akshay@ubuntu:~/ls-lab$ ls -1
 docs
 notes.txt
 readme.txt
 scripts
-akshay@ubuntu:~/ls-lab$ ls -l docs
 total 0
 -rw-r--r-- 1 akshay akshay 0 ... a.txt
 -rw-r--r-- 1 akshay akshay 0 ... b.txt
-akshay@ubuntu:~/ls-lab$ ls -ld docs
 drwxr-xr-x 2 akshay akshay 4096 ... docs
-akshay@ubuntu:~/ls-lab$ ls -d */
 docs/  scripts/
 ```
 
 **5. Recursive listing**
 
 ```bash
-akshay@ubuntu:~/ls-lab$ ls -R
+ls -R
+```
+
+Example output:
+
+```text
 .:
 docs  notes.txt  readme.txt  scripts
 
@@ -203,19 +223,24 @@ hello.sh
 **6. Sort by size**
 
 ```bash
-akshay@ubuntu:~/ls-lab$ mkdir sizes
-akshay@ubuntu:~/ls-lab$ cd sizes
-akshay@ubuntu:~/ls-lab/sizes$ echo 12345 a-small.txt
-akshay@ubuntu:~/ls-lab/sizes$ echo 1234567890123456789 b-big.txt
-akshay@ubuntu:~/ls-lab/sizes$ echo 1234567890 c-medium.txt
-akshay@ubuntu:~/ls-lab/sizes$ ls
+mkdir sizes
+cd sizes
+echo 12345 > a-small.txt
+echo 1234567890123456789 > b-big.txt
+echo 1234567890 > c-medium.txt
+ls
+ls -lS
+ls -lSr
+```
+
+Example output:
+
+```text
 a-small.txt  b-big.txt  c-medium.txt
-akshay@ubuntu:~/ls-lab/sizes$ ls -lS
 total 12
 -rw-r--r-- 1 akshay akshay 20 ... b-big.txt
 -rw-r--r-- 1 akshay akshay 11 ... c-medium.txt
 -rw-r--r-- 1 akshay akshay  6 ... a-small.txt
-akshay@ubuntu:~/ls-lab/sizes$ ls -lSr
 total 12
 -rw-r--r-- 1 akshay akshay  6 ... a-small.txt
 -rw-r--r-- 1 akshay akshay 11 ... c-medium.txt
@@ -225,16 +250,21 @@ total 12
 **7. Sort by time**
 
 ```bash
-akshay@ubuntu:~/ls-lab/sizes$ mkdir ../times
-akshay@ubuntu:~/ls-lab/sizes$ cd ../times
-akshay@ubuntu:~/ls-lab/times$ touch first.txt
-akshay@ubuntu:~/ls-lab/times$ sleep 1
-akshay@ubuntu:~/ls-lab/times$ touch second.txt
-akshay@ubuntu:~/ls-lab/times$ sleep 1
-akshay@ubuntu:~/ls-lab/times$ touch third.txt
-akshay@ubuntu:~/ls-lab/times$ ls -t
+mkdir ../times
+cd ../times
+touch first.txt
+sleep 1
+touch second.txt
+sleep 1
+touch third.txt
+ls -t
+ls -tr
+```
+
+Example output:
+
+```text
 third.txt  second.txt  first.txt
-akshay@ubuntu:~/ls-lab/times$ ls -tr
 first.txt  second.txt  third.txt
 ```
 
@@ -243,13 +273,18 @@ Try `ls -ltr` too. The newest file is at the bottom.
 **8. System directories and errors**
 
 ```bash
-akshay@ubuntu:~/ls-lab/times$ ls -ld /bin
-lrwxrwxrwx 1 root root 7 ... /bin -usr/bin
-akshay@ubuntu:~/ls-lab/times$ ls nothing
+ls -ld /bin
+ls nothing
+ls *.xyz
+ls /root
+```
+
+Example output:
+
+```text
+lrwxrwxrwx 1 root root 7 ... /bin -> usr/bin
 ls: cannot access 'nothing': No such file or directory
-akshay@ubuntu:~/ls-lab/times$ ls *.xyz
 ls: cannot access '*.xyz': No such file or directory
-akshay@ubuntu:~/ls-lab/times$ ls /root
 ls: cannot open directory '/root': Permission denied
 ```
 
@@ -258,17 +293,22 @@ The first line starts with `l`, so `/bin` is a symbolic link to `usr/bin`. This 
 **9. See the `ll` alias**
 
 ```bash
-akshay@ubuntu:~/ls-lab/times$ type ll
+type ll
+```
+
+Example output:
+
+```text
 ll is aliased to `ls -alF'
 ```
 
 **10. Clean up**
 
-**Warning:** `rm -r` deletes a folder and everything inside it, with no undo. Check the path before you press Enter. Move out of the folder first.
+> **Warning:** `rm -r` deletes a folder and everything inside it, with no undo. Check the path before you press Enter. Move out of the folder first.
 
 ```bash
-akshay@ubuntu:~/ls-lab/times$ cd ~
-akshay@ubuntu:~$ rm -r ~/ls-lab
+cd ~
+rm -r ~/ls-lab
 ```
 
 ---

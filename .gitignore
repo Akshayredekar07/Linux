@@ -1,0 +1,27 @@
+
+# ---------------------------------------------------------
+# Notes not written yet (Phase 2 extra note, Phases 3 to 24)
+# Each note is shown again when you add a "!" line below.
+# ---------------------------------------------------------
+/02__navigation/documentation/04-*.md
+/0[3-9]__*/documentation/*.md
+/1[0-9]__*/documentation/*.md
+/2[0-4]__*/documentation/*.md
+
+# Markdown files anywhere inside source phases 03 through 24
+/src/0[3-9]__*/*.md
+/src/0[3-9]__*/**/*.md
+/src/1[0-9]__*/*.md
+/src/1[0-9]__*/**/*.md
+/src/2[0-4]__*/*.md
+/src/2[0-4]__*/**/*.md
+
+# Temporary work area under src
+/src/work/
+
+# Sample directory created by the directory-structure lesson
+structure-lab/
+
+# ---------------------------------------------------------
+# Finished notes: add one line per note, under this heading
+# ---------------------------------------------------------

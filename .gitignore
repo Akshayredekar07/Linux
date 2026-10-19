@@ -3,7 +3,6 @@
 # Notes not written yet (Phase 2 extra note, Phases 3 to 24)
 # Each note is shown again when you add a "!" line below.
 # ---------------------------------------------------------
-/02__navigation/documentation/04-*.md
 /0[3-9]__*/documentation/*.md
 /1[0-9]__*/documentation/*.md
 /2[0-4]__*/documentation/*.md
@@ -25,3 +24,5 @@ structure-lab/
 # ---------------------------------------------------------
 # Finished notes: add one line per note, under this heading
 # ---------------------------------------------------------
+!/src/03__file-operations/documentation/02-creating-files.md
+!/src/03__file-operations/documentation/01-creating-directories.md
